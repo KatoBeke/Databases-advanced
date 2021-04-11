@@ -10,8 +10,8 @@ Ik heb mijn script op mijn Windows pc gemaakt. Daarna heb ik deze repository ged
 Om het script scraper.py te kunnen gebruiken moet je python runnen. Ik raad je de laatste versie van Python (3.9.2) aan. Om python te installeren gebruik je de commando sudo apt install python3. <br>
 Daarnaast moet je ook pip, pandas en bs4 installeren. Je kan dit doen door de volgende dingen te typen in je Python terminal: <br>
 sudo apt install python3-pip <br>
-pip3 install pandas <br>
-pip3 install bs4 <br>
+*pip3 install pandas <br>
+*pip3 install bs4 <br>
 
 Het is ook heel belangrijk dat als je het script scraper.py wil runnen je in dezelfde map zit als waar scraper.py staat. Om naar dezelfde map te gaan typ je sudo su. Typ nu cd gevolgd door de naam van je repository in Github (bij mij is dit dan cd Databases-advanced). 
 
@@ -22,7 +22,7 @@ Het doel van deze opdracht is de data uit de vorige opdracht in MongoDB plaatsen
 
 ## Ubuntu
 ### MongoDB
-
+Ik heb mijn scraper aangepast en dit een nieuwe naam gegeven namelijk mongo.py. 
 
 # Opdracht 3: Redis
 
