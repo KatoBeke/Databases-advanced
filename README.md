@@ -8,7 +8,7 @@ Het doel van deze opdracht is om de scraper te runnen op Ubuntu Virtual Machine.
 Ik heb mijn script op mijn Windows pc gemaakt. Daarna heb ik deze repository gedownload op Ubuntu via de commando git clone met de link https://github.com/KatoBeke/Databases-advanced.git. <br> 
 
 Om het script scraper.py te kunnen gebruiken moet je python runnen. Ik raad je de laatste versie van Python (3.9.2) aan. Om python te installeren gebruik je de commando sudo apt install python3. <br>
-Daarnaast moet je ook pip, pandas en bs4 installeren. Je kan dit doen door de volgende dingen te typen in je Python terminal: <br>
+Daarnaast moet je ook pip, pandas en bs4 installeren. Je kan dit doen door de volgende dingen te typen in je Python terminal:
 * sudo apt install python3-pip <br>
 * pip3 install pandas <br>
 * pip3 install bs4 <br>
