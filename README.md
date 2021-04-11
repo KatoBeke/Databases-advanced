@@ -22,7 +22,7 @@ Het doel van deze opdracht is de data uit de vorige opdracht in MongoDB plaatsen
 
 ## Ubuntu
 ### MongoDB
-Ik heb mijn scraper aangepast en dit een nieuwe naam gegeven namelijk mongo.py. <br>
+Ik heb mijn scraper aangepast en dit een nieuwe naam gegeven namelijk mongo.py. <br> <br>
 Om MongoDB te installeren en daarna te kunnen werken met mongo.py moet je de volgende commandos gebruiken:
 * sudo apt install curl
 * curl -fsSL https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
