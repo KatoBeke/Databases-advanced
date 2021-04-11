@@ -22,7 +22,16 @@ Het doel van deze opdracht is de data uit de vorige opdracht in MongoDB plaatsen
 
 ## Ubuntu
 ### MongoDB
-Ik heb mijn scraper aangepast en dit een nieuwe naam gegeven namelijk mongo.py. 
+Ik heb mijn scraper aangepast en dit een nieuwe naam gegeven namelijk mongo.py. Om MongoDB te installeren en daarna te kunnen werken met mongo.py moet je de volgende commandos gebruiken:
+* sudo apt install curl
+* curl -fsSL https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+* echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+* sudo apt update
+* sudo apt install mongodb-org
+* sudo systemctl start mongod.service
+* sudo systemctl status mongod
+* sudo systemctl enable mongod
+* mongo --eval 'db.runCommand({ connectionStatus: 1 })'
 
 # Opdracht 3: Redis
 
