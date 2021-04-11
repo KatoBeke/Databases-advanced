@@ -1,5 +1,5 @@
 # Databases-advanced
-# Opdracht 1: Scraper
+# Opdracht 1: Scraper (scraper.py)
 Ik heb de volgende website gebruikt om te scrapen: https://www.blockchain.com/btc/unconfirmed-transactions <br>
 Ik heb hiervan de hash, time, btc en usd gescrapet. Daarna heb ik de hash, time, btc en usd van de meest waardevolle Hash voor Bitcoin per minuut in USD gezocht en dit in een dataframe gezet. Tenslotte heb ik dit dan toegevoegd aan result.log.
 
@@ -17,7 +17,12 @@ Het is ook heel belangrijk dat als je het script scraper.py wil runnen je in dez
 
 Om het script scraper.py te kunnen runnen gebruik je de commando python3 scraper.py. Om de uitvoering van het script te stoppen, typ je ctrl + c. in de terminal.
 
-# Opdracht 2: Mongo
+# Opdracht 2: Mongo (mongo.py en mongo.sh)
+Het doel van deze opdracht is de data uit de vorige opdracht in MongoDB plaatsen. 
+
+## Ubuntu
+### MongoDB
+
 
 # Opdracht 3: Redis
 
