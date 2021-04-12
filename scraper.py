@@ -3,6 +3,7 @@ from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
 import pandas 
 import time
+import os
 
 url = "https://www.blockchain.com/btc/unconfirmed-transactions"
 request = Request(url) #verzoek krijgen
@@ -29,12 +30,13 @@ maximumUSD = 0
 def getTransactions(hashed,timed,btc,usd):
     for item in blockchain:
         Hash = item.find_all("a", {"class": "sc-1r996ns-0 fLwyDF sc-1tbyx6t-1 kCGMTY iklhnl-0 eEewhk d53qjk-0 ctEFcK"})[0].text
-
+        print(Hash)
         time = item.find_all("span", {"class": "sc-1ryi78w-0 cILyoi sc-16b9dsl-1 ZwupP u3ufsr-0 eQTRKC"})[0].text
-
+        print(time)
         BTC = item.find_all("span", {"class": "sc-1ryi78w-0 cILyoi sc-16b9dsl-1 ZwupP u3ufsr-0 eQTRKC"})[1].text
-
+        print(BTC)
         USD = item.find_all("span", {"class": "sc-1ryi78w-0 cILyoi sc-16b9dsl-1 ZwupP u3ufsr-0 eQTRKC"})[2].text
+        print(USD)
         #alle bedragen in USD in een lijst steken
         usds.append(USD)
 
@@ -76,13 +78,17 @@ indexHash = indexMaxUSD - 3
 hashes = result[indexHash]
 hashen.append(hashes)
 
-
 #De hash, tijd, btc en usd van de meest waardevolle Hash voor Bitcoin per minuut in USD in dataframe zetten en toevoegen aan een bestand
 data = {'Hash':hashen,'Time':tijd,'BTC':bitcoin,'USD':dollar}
 dataframe = pandas.DataFrame(data)
-dataframe.head(1).to_csv('result.log', header = True, index = None, sep = ' ' , mode = 'w')
-    
-while True:
+dataframe.head(1).to_csv('result.log', header = True, index = None, sep = ' ' , mode = 'a')
+
+#Elke minuut alles herhalen
+while True: 
     time.sleep(60)
-    getTransactions(hashed,timed,btc,usd)
-    dataframe.head(1).to_csv('result.log', header = True, index = None, sep = ' ' , mode = 'a')
+    os.system("scraper.py")
+  
+  
+
+
+    
