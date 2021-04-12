@@ -3,6 +3,7 @@ from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
 import pandas 
 import time
+import os
 import pymongo as mongo
 
 url = "https://www.blockchain.com/btc/unconfirmed-transactions"
