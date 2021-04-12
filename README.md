@@ -21,7 +21,7 @@ Om het script scraper.py te kunnen runnen gebruik je de commando python3 scraper
 Het doel van deze opdracht is de data uit de vorige opdracht in MongoDB plaatsen. 
 
 ## Ubuntu
-Ik gebruik nog altijd Ubuntu. Vergeet daarom zeker je git op Ubuntu up te daten!!! Dit doe je via de commando git pull met de link https://github.com/KatoBeke/Databases-advanced.git. <br> 
+Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt upgedated!!! Dit doe je via de commando git pull met de link https://github.com/KatoBeke/Databases-advanced.git. <br> 
 ### MongoDB
 Ik heb mijn scraper aangepast en dit een nieuwe naam gegeven namelijk mongo.py. <br> <br>
 Om MongoDB te installeren en daarna te kunnen werken met mongo.py moet je de volgende commandos gebruiken:
