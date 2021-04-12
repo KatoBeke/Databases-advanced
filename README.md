@@ -36,6 +36,8 @@ Om MongoDB te installeren en daarna te kunnen werken met mongo.py moet je de vol
 * sudo systemctl enable mongod
 * mongo --eval 'db.runCommand({ connectionStatus: 1 })'
 
+Om het script mongo.py te kunnen runnen gebruik je de commando python3 mongo.py. Om de uitvoering van het script te stoppen, typ je ctrl + c. in de terminal.
+
 # Opdracht 3: Redis
 
 # Opdracht 4: Docker Images
