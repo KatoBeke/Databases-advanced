@@ -81,7 +81,7 @@ hashen.append(hashes)
 #De hash, tijd, btc en usd van de meest waardevolle Hash voor Bitcoin per minuut in USD in dataframe zetten en toevoegen aan een bestand
 data = {'Hash':hashen,'Time':tijd,'BTC':bitcoin,'USD':dollar}
 dataframe = pandas.DataFrame(data)
-dataframe.head(1).to_csv('result.log', header = True, index = None, sep = ' ' , mode = 'w')
+dataframe.head(1).to_csv('result.log', header = True, index = None, sep = ' ' , mode = 'a')
 
 #MongoDB
 client = mongo.MongoClient("mongodb://localhost:27017")
@@ -92,7 +92,4 @@ dataDatabase.insert_one(invoer) #data invoeren in de database van MongoDB
 
 while True:
     time.sleep(60)
-    getTransactions(hashed,timed,btc,usd)
-    dataframe.head(1).to_csv('result.log', header = True, index = None, sep = ' ' , mode = 'a')
-    invoer = {'Hash':hashen,'Time':tijd,'BTC':bitcoin,'USD':dollar} 
-    dataDatabase.insert_one(invoer) #data invoeren in de database van MongoDB
+    os.system("mongo.py")
