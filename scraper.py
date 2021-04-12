@@ -30,13 +30,13 @@ maximumUSD = 0
 def getTransactions(hashed,timed,btc,usd):
     for item in blockchain:
         Hash = item.find_all("a", {"class": "sc-1r996ns-0 fLwyDF sc-1tbyx6t-1 kCGMTY iklhnl-0 eEewhk d53qjk-0 ctEFcK"})[0].text
-        print(Hash)
+
         time = item.find_all("span", {"class": "sc-1ryi78w-0 cILyoi sc-16b9dsl-1 ZwupP u3ufsr-0 eQTRKC"})[0].text
-        print(time)
+
         BTC = item.find_all("span", {"class": "sc-1ryi78w-0 cILyoi sc-16b9dsl-1 ZwupP u3ufsr-0 eQTRKC"})[1].text
-        print(BTC)
+
         USD = item.find_all("span", {"class": "sc-1ryi78w-0 cILyoi sc-16b9dsl-1 ZwupP u3ufsr-0 eQTRKC"})[2].text
-        print(USD)
+
         #alle bedragen in USD in een lijst steken
         usds.append(USD)
 
