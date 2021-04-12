@@ -88,7 +88,6 @@ while True:
     time.sleep(60)
     os.system("scraper.py")
   
-  
 
 
     
