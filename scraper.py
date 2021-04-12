@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import time
 
+#Functie maken voor alle rijen met hash, tijd, btc en usd uit url te halen
 def getBlockchain():
     url = "https://www.blockchain.com/btc/unconfirmed-transactions"
     request = Request(url) #verzoek krijgen
@@ -21,13 +22,12 @@ hashed = []
 timed = []
 btc =  []
 usd = []
-
 result = []
 
 #Functie om hash, tijd, btc en usd van de url te krijgen
 def getTransactions(hashed,timed,btc,usd):
     blockchain = getBlockchain()
-    data = pd.DataFrame(columns=['Hash','Time', 'BTC', 'USD'])
+    data = pd.DataFrame(columns=['Hash','Time', 'BTC', 'USD']) #Dataframe aanmaken en kolommen een naam geven
     for item in blockchain:
         Hash = item.find_all("a", {"class": "sc-1r996ns-0 fLwyDF sc-1tbyx6t-1 kCGMTY iklhnl-0 eEewhk d53qjk-0 ctEFcK"})[0].text
 
@@ -38,16 +38,25 @@ def getTransactions(hashed,timed,btc,usd):
         USD = item.find_all("span", {"class": "sc-1ryi78w-0 cILyoi sc-16b9dsl-1 ZwupP u3ufsr-0 eQTRKC"})[2].text
         USD = USD.replace(',','')
 
-        #alle hash, tijd, btc en usd in 1 lijst steken
+        #Alle hash, time, btc en usd in 1 lijst steken en zorgen dat lijst telkens leeg is nadien
         result.clear()
         result.append(Hash)
         result.append(time)
         result.append(BTC)
         result.append(USD)
 
-        data = data.append({'Hash': result[0], 'Time': result[1], 'BTC': result[2], 'USD': result[3]}, ignore_index=True)
+        #De hash, time, btc en usd uit lijst halen en telkens toevoegen aan dataframe
+        hashen = result[0]
+        Time = result[1]
+        btc = result[2]
+        usd = result[3]
+
+        data = data.append({'Hash': hashen, 'Time': Time, 'BTC': btc, 'USD': usd}, ignore_index=True)
+        #Dataframe sorteren volgens USD
         highest_usd = data.sort_values(by=['USD'], ascending=True)
+        #De laatste rij is de hash met de hoogste waarde in USD
         highest_usd = highest_usd.tail(1)
+    #De hash met de hoogste waarde in USD toevoegen aan result.log
     highest_usd.to_csv('result.log', header = True, index = None, sep = ' ' , mode = 'a')
         
 #Elke minuut alles herhalen
