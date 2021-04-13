@@ -72,11 +72,9 @@ Om **Redis** te installeren moet je de volgende commando's gebruiken (of gebruik
 * sudo apt install redis-server
 * sudo systemctl status redis-server
 
-Om **Redis** te starten gebruik je de commando's (of gebruik **redis.sh** van de map Bash scripts):
-* sudo systemctl start redis
+Om **Redis** te starten gebruik je het commando (of gebruik **redis.sh** van de map Bash scripts): sudo systemctl start redis
 
-Om **Redis** te stoppen gebruik je de commando's (of gebruik **redis.sh** van de map Bash scripts):
-* sudo systemctl stop redis
+Om **Redis** te stoppen gebruik je het commando (of gebruik **redis.sh** van de map Bash scripts): sudo systemctl stop redis
 
 Voor deze opdracht heb ik 2 Python scripts namelijk **redis.py** en **redToMongo.py**. Gebruik het script **redis.py** om de gescrapete data in te voeren in de Redis-databank. Gebruik het script **redToMongo.py** om uit de Redis-databank de hash met de hoogste waarde in USD per minuut te halen en in te voeren in de MongoDB database. <br>
 Om **redis.py** en **redToMongo.py** te kunnen gebruiken en dus mongo te runnen, moet je de volgende commando's gebruiken:
