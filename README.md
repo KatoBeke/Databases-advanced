@@ -15,7 +15,7 @@ Daarnaast moet je ook pip, pandas en bs4 installeren. Je kan dit doen door de vo
 * pip3 install bs4 
 
 Het is ook heel belangrijk dat als je het script **scraper.py** wil runnen je in dezelfde map zit als waar **scraper.py** staat. Om naar dezelfde map te gaan typ je cd gevolgd door de naam van je repository in Github (bij mij is dit dan cd Databases-advanced). <br> <br>
-Om het script **scraper.py** te kunnen runnen gebruik je de commando python3 scraper.py. Om de uitvoering van het script te stoppen, typ je ctrl + c. in de terminal.
+Om het script **scraper.py** te kunnen runnen gebruik je de commando python3 scraper.py. Om de uitvoering van het script te stoppen, typ je ctrl + c in de terminal.
 
 # Opdracht 2: Mongo (mongo.py, bash.sh en mongo.sh)
 Het doel van deze opdracht is de data uit de vorige opdracht in MongoDB plaatsen. 
@@ -43,7 +43,7 @@ Om **mongo.py** te kunnen gebruiken en dus mongo te runnen, moet je de volgende 
 * mongo
 
 Het is ook heel belangrijk dat als je het script **mongo.py** wil runnen je in dezelfde map zit als waar **mongo.py** staat. Om naar dezelfde map te gaan typ je cd gevolgd door de naam van je repository in Github (bij mij is dit dan cd Databases-advanced). <br> <br>
-Om het script **mongo.py** te kunnen runnen gebruik je de commando python3 mongo.py. Om de uitvoering van het script te stoppen, typ je ctrl + c. in de terminal.
+Om het script **mongo.py** te kunnen runnen gebruik je de commando python3 mongo.py. Om de uitvoering van het script te stoppen, typ je ctrl + c in de terminal.
 
 ### MongoDB Compass
 Als u een visuele interface wilt, kunt u MongoDB Compass installeren. Hiervoor gebruik je de volgende commando's: 
@@ -85,7 +85,7 @@ Om **redis.py** te kunnen gebruiken en dus mongo te runnen, moet je de volgende 
 * pip3 install redis 
 
 Het is ook heel belangrijk dat als je het script **redis.py** wil runnen je in dezelfde map zit als waar **redis.py** staat. Om naar dezelfde map te gaan typ je cd gevolgd door de naam van je repository in Github (bij mij is dit dan cd Databases-advanced). <br> <br>
-Om het script **redis.py** te kunnen runnen gebruik je de commando python3 redis.py. Om de uitvoering van het script te stoppen, typ je ctrl + c. in de terminal.
+Om het script **redis.py** te kunnen runnen gebruik je de commando python3 redis.py. Om de uitvoering van het script te stoppen, typ je ctrl + c in de terminal.
 
 ### MongoDB
 Zie Opdracht 2!!!
