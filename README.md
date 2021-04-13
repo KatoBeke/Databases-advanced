@@ -61,7 +61,7 @@ Ik heb op de database highest_hashes gedrukt en op de collection values. Nu word
 ![image](https://user-images.githubusercontent.com/74418649/114557525-0cca8f00-9c6a-11eb-9eb4-9b70f092727d.png)
 
 # Opdracht 3: Redis (redis.py en redis.sh)
-Heel deze opdracht draait om de beschikbaarheid van de gegevens tijdens de uitvoering van het script **redis.py**. Redis is een key-value paired database die ik gebruik om mijn geschraapte data tijdelijk te cachen. Het doel van deze opdracht is om de data die ik uit mijn scraper heb gehaald (scraper.py) onmiddellijk bewaar in een Redis-database. Deze Redis-database houdt deze data slechts 1 minuut bij. Als de data zich in mijn Redis-databank bevindt, haalt mijn redis.py de data uit de Redis-databank en filtert de data zodat enkel de hash met de hoogste waarde in USD overblijft. Vervolgens wordt de hash met de hoogste waarde in USD definitief opgeslagen in een database van MongoDB. Als de data is opgeslagen in de MongoDB-database wordt de data uit de Redis-database verwijderd. Heel dit proces gebeurt om de 1 minuut.
+Heel deze opdracht draait om de beschikbaarheid van de gegevens tijdens de uitvoering van het script **redis.py**. Redis is een key-value paired database die ik gebruik om mijn geschraapte data tijdelijk te cachen. Het doel van deze opdracht is om de data die ik heb gescrapet (scraper.py) onmiddellijk bewaar in een Redis-database. Deze Redis-database houdt deze data slechts 1 minuut bij. Als de data zich in mijn Redis-databank bevindt, haalt mijn redis.py de data uit de Redis-databank en filtert de data zodat enkel de hash met de hoogste waarde in USD overblijft. Vervolgens wordt de hash met de hoogste waarde in USD definitief opgeslagen in een database van MongoDB. Als de data is opgeslagen in de MongoDB-database wordt de data uit de Redis-database verwijderd. Heel dit proces gebeurt om de 1 minuut.
 
 ## Ubuntu
 Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt geüpdatet!!! Dit doe je via de commando git pull met de link https://github.com/KatoBeke/Databases-advanced.git. <br> 
@@ -87,7 +87,7 @@ Het is ook heel belangrijk dat als je het script **redis.py** wil runnen je in d
 Om het script **redis.py** te kunnen runnen gebruik je de commando python3 redis.py. Om de uitvoering van het script te stoppen, typ je ctrl + c. in de terminal.
 
 ### MongoDB
-Zie Opdracht 2
+Zie Opdracht 2!!!
 # Opdracht 4: Docker Images
 
 # Opdracht 5: Container Orchestration
