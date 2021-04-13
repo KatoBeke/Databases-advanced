@@ -18,15 +18,11 @@ def getBlockchain():
 
     return blockchain
 
-#Lijsten maken van de hash, tijd, btc en usd voor elke bitcoin transactie
-hashed = []
-timed = []
-btc =  []
-usd = []
+#Lijst maken van de hash, tijd, btc en usd voor elke bitcoin transactie
 result = []
 
 #Functie om hash, tijd, btc en usd van de url te krijgen
-def getTransactions(hashed,timed,btc,usd):
+def getTransactions():
     blockchain = getBlockchain()
     data = pd.DataFrame(columns=['Hash','Time', 'BTC', 'USD']) #Dataframe aanmaken en kolommen een naam geven
     for item in blockchain:
@@ -58,16 +54,16 @@ def getTransactions(hashed,timed,btc,usd):
         #De laatste rij is de hash met de hoogste waarde in USD
         highest_usd = highest_usd.tail(1)
     #De hash met de hoogste waarde in USD toevoegen aan result.log
-    highest_usd.to_csv('result.log', header = True, index = None, sep = ' ' , mode = 'a')
+    #highest_usd.to_csv('result.log', header = True, index = None, sep = ' ' , mode = 'a')
 
     #MongoDB
-    client = mongo.MongoClient("mongodb://localhost:27017")
-    database = client["hashes"] #een naam kiezen voor de database
-    dataDatabase = database["waarden"] #een naam kiezen voor de data uit de database
-    invoer = {'Hash':hashen,'Time':Time,'BTC':btc,'USD':usd} 
-    dataDatabase.insert_one(invoer) #data invoeren in de database van MongoDB
+    client = mongo.MongoClient("mongodb://localhost:27017") #Connecteren met Mongo
+    database = client["highest_hashes"] #Een naam kiezen voor de database
+    hoogste_hashes = database["values"] #Een naam kiezen voor de data uit de database (collection)
+    invoer = {'Hash':hashen,'Time':Time,'BTC':btc,'USD':usd} #Data
+    hoogste_hashes.insert_one(invoer) #Data invoeren in de database van MongoDB
 
 #Elke minuut alles herhalen
 while True: 
-    getTransactions(hashed,timed,btc,usd)
     time.sleep(60)
+    getTransactions()
