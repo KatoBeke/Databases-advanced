@@ -17,15 +17,11 @@ def getBlockchain():
 
     return blockchain
 
-#Lijsten maken van de hash, tijd, btc en usd voor elke bitcoin transactie
-hashed = []
-timed = []
-btc =  []
-usd = []
+#Lijst maken van de hash, tijd, btc en usd voor elke bitcoin transactie
 result = []
 
 #Functie om hash, tijd, btc en usd van de url te krijgen
-def getTransactions(hashed,timed,btc,usd):
+def getTransactions():
     blockchain = getBlockchain()
     data = pd.DataFrame(columns=['Hash','Time', 'BTC', 'USD']) #Dataframe aanmaken en kolommen een naam geven
     for item in blockchain:
@@ -61,5 +57,6 @@ def getTransactions(hashed,timed,btc,usd):
         
 #Elke minuut alles herhalen
 while True: 
-    getTransactions(hashed,timed,btc,usd)
     time.sleep(60)
+    getTransactions()
+    
