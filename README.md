@@ -22,7 +22,6 @@ Het doel van deze opdracht is de data uit de vorige opdracht in MongoDB plaatsen
 ## Ubuntu
 Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt geüpdatet!!! Dit doe je via de commando git pull met de link https://github.com/KatoBeke/Databases-advanced.git. <br> 
 ### MongoDB
-Ik heb mijn scraper aangepast en dit een nieuwe naam gegeven namelijk mongo.py. <br>
 Om MongoDB te installeren moet je de volgende commando's gebruiken:
 * sudo apt-get install gnupg
 * wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
@@ -32,6 +31,7 @@ Om MongoDB te installeren moet je de volgende commando's gebruiken:
 * sudo systemctl daemon-reload <br>
 --> je kan deze commando's ook vinden in bash.sh in de map Bash scripts
 
+Ik heb mijn scraper aangepast en dit een nieuwe naam gegeven namelijk mongo.py. <br>
 Om mongo.py te kunnen gebruiken en dus mongo te runnen, moet je de volgende commando's gebruiken:
 * pip3 install pymongo 
 * cd < mongodb installation dir >/ bin
