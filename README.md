@@ -35,8 +35,7 @@ Om MongoDB te installeren moet je de volgende commandos gebruiken:
 * sudo systemctl enable mongod
 * mongo --eval 'db.runCommand({ connectionStatus: 1 })'
 
-Om mongo.py te kunnen gebruiken en dus mongo te runnen, moet je de volgende commandos gebruiken:
-* pip3 install pymongo
+Om mongo.py te kunnen gebruiken en dus mongo te runnen, moet je de volgende commandos gebruiken: * pip3 install pymongo 
 * cd < mongodb installation dir >/ bin
 * mongo
 
