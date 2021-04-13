@@ -56,6 +56,8 @@ Om te connecteren klik je op Connect en Connect to... Je kan op 2 manieren conne
 
 Nu krijg je een overzicht van alle databases. Zodra je op een database klikt krijg je een scherm met de collections van die database.
 
+Ik heb op de database highest_hashes gedrukt en op de collection values. Nu wordt elke minuut de hash met de grootste waarde in USD aan deze database en collection toegevoegd. Het ziet er uit als een json-file:
+![image](https://user-images.githubusercontent.com/74418649/114557525-0cca8f00-9c6a-11eb-9eb4-9b70f092727d.png)
 
 # Opdracht 3: Redis
 
