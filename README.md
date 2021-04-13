@@ -54,7 +54,7 @@ Als u een visuele interface wilt, kunt u MongoDB Compass installeren. Hiervoor g
 Ga nu naar applications op Ubuntu en selecteer MongoDB Compass. MongoDB Compass wordt geopend. 
 Om te connecteren klik je op Connect en Connect to... Je kan op 2 manieren connecteren:
 * door een connectie string te plakken in de balk die er verschijnt en dan op Connect te drukken of
-* klik op Fill in connection fields individually. Er verschijnt een scherm waar je hostname en port kan invullen. Ik heb bij hostname localhost ingevuld en bij port 27017. Verder heb ik ook SRV record afgevinkt en authentication op None gezet. Druk op Connect.
+* klik op Fill in connection fields individually. Er verschijnt een scherm waar je hostname en port kan invullen. Vul bij hostname localhost en bij port 27017 in. Vink SRV record af en zet authentication op None. Druk op Connect.
 
 Nu krijg je een overzicht van alle databases. Zodra je op een database klikt krijg je een scherm met de collections van die database. Druk op de database highest_hashes op de collection values. 
 Zodra je het script **mongo.py** begint te runnen wordt elke minuut de meest waardevolle Hash voor Bitcoin per minuut in USD aan deze database en collection toegevoegd. Het ziet er als volgt uit:
