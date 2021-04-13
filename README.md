@@ -13,8 +13,7 @@ Daarnaast moet je ook pip, pandas en bs4 installeren. Je kan dit doen door de vo
 * pip3 install pandas
 * pip3 install bs4 
 
-Het is ook heel belangrijk dat als je het script scraper.py wil runnen je in dezelfde map zit als waar scraper.py staat. Om naar dezelfde map te gaan typ je cd gevolgd door de naam van je repository in Github (bij mij is dit dan cd Databases-advanced). 
-
+Het is ook heel belangrijk dat als je het script scraper.py wil runnen je in dezelfde map zit als waar scraper.py staat. Om naar dezelfde map te gaan typ je cd gevolgd door de naam van je repository in Github (bij mij is dit dan cd Databases-advanced). <br>
 Om het script scraper.py te kunnen runnen gebruik je de commando python3 scraper.py. Om de uitvoering van het script te stoppen, typ je ctrl + c. in de terminal.
 
 # Opdracht 2: Mongo (mongo.py en mongo.sh)
@@ -40,7 +39,7 @@ Om mongo.py te kunnen gebruiken en dus mongo te runnen, moet je de volgende comm
 * cd < mongodb installation dir >/ bin
 * mongo
 
-Het is ook heel belangrijk dat als je het script mongo.py wil runnen je in dezelfde map zit als waar mongo.py staat. Om naar dezelfde map te gaan typ je cd gevolgd door de naam van je repository in Github (bij mij is dit dan cd Databases-advanced). 
+Het is ook heel belangrijk dat als je het script mongo.py wil runnen je in dezelfde map zit als waar mongo.py staat. Om naar dezelfde map te gaan typ je cd gevolgd door de naam van je repository in Github (bij mij is dit dan cd Databases-advanced). <br>
 Om het script mongo.py te kunnen runnen gebruik je de commando python3 mongo.py. Om de uitvoering van het script te stoppen, typ je ctrl + c. in de terminal.
 
 ### MongoDB Compass
