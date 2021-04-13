@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import time
 import pymongo as mongo
+import json
 
 #Functie maken voor alle rijen met hash, tijd, btc en usd uit url te halen
 def getBlockchain():
@@ -53,17 +54,24 @@ def getTransactions():
         highest_usd = data.sort_values(by=['USD'], ascending=True)
         #De laatste rij is de hash met de hoogste waarde in USD
         highest_usd = highest_usd.tail(1)
-    #De hash met de hoogste waarde in USD toevoegen aan result.log
-    #highest_usd.to_csv('result.log', header = True, index = None, sep = ' ' , mode = 'a')
 
+        return highest_usd
+
+#Functie voor te connecteren met MongoDB en hash met de hoogste usd toe te voegen aan databank in MongoDB
+def mongoDB():
+    highest_hash = getTransactions()
+
+    #Alle data uit dataframe highest_hash halen en converteren naar json
+    json_data = highest_hash.to_json(orient="records").replace('[','').replace(']','')
+    invoer = json.loads(json_data) #Dit is de data dat toegevoegd moet worden aan database van MongoDB
+    
     #MongoDB
     client = mongo.MongoClient("mongodb://localhost:27017") #Connecteren met Mongo
     database = client["highest_hashes"] #Een naam kiezen voor de database
     hoogste_hashes = database["values"] #Een naam kiezen voor de data uit de database (collection)
-    invoer = {'Hash':hashen,'Time':Time,'BTC':btc,'USD':usd} #Data
     hoogste_hashes.insert_one(invoer) #Data invoeren in de database van MongoDB
-
+    
 #Elke minuut alles herhalen
 while True: 
     time.sleep(60)
-    getTransactions()
+    mongoDB()
