@@ -35,14 +35,18 @@ Om MongoDB te installeren moet je de volgende commandos gebruiken:
 * sudo systemctl enable mongod
 * mongo --eval 'db.runCommand({ connectionStatus: 1 })'
 
-Om mongo.py te kunnen gebruiken en dus mongo te runnen, moet je de volgende commandos gebruiken: * pip3 install pymongo 
+Om mongo.py te kunnen gebruiken en dus mongo te runnen, moet je de volgende commandos gebruiken:
+* pip3 install pymongo 
 * cd < mongodb installation dir >/ bin
 * mongo
 
 Om het script mongo.py te kunnen runnen gebruik je de commando python3 mongo.py. Om de uitvoering van het script te stoppen, typ je ctrl + c. in de terminal.
 
 ### MongoDB Compass
-If you want a visual interface, you can install MongoDB Compass.
+Als u een visuele interface wilt, kunt u MongoDB Compass installeren. Hiervoor gebruik je de volgende commandos: 
+* apt-get update
+* wget https://downloads.mongodb.com/compass/mongodb-compass_1.15.1_amd64.deb
+* sudo dpkg -i mongodb-compass_1.15.1_amd64.deb
 
 
 # Opdracht 3: Redis
