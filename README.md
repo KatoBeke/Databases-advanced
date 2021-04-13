@@ -13,7 +13,7 @@ Daarnaast moet je ook pip, pandas en bs4 installeren. Je kan dit doen door de vo
 * pip3 install pandas
 * pip3 install bs4 
 
-Het is ook heel belangrijk dat als je het script scraper.py wil runnen je in dezelfde map zit als waar scraper.py staat. Om naar dezelfde map te gaan typ je sudo su. Typ nu cd gevolgd door de naam van je repository in Github (bij mij is dit dan cd Databases-advanced). 
+Het is ook heel belangrijk dat als je het script scraper.py wil runnen je in dezelfde map zit als waar scraper.py staat. Om naar dezelfde map te gaan typ je cd gevolgd door de naam van je repository in Github (bij mij is dit dan cd Databases-advanced). 
 
 Om het script scraper.py te kunnen runnen gebruik je de commando python3 scraper.py. Om de uitvoering van het script te stoppen, typ je ctrl + c. in de terminal.
 
@@ -40,13 +40,21 @@ Om mongo.py te kunnen gebruiken en dus mongo te runnen, moet je de volgende comm
 * cd < mongodb installation dir >/ bin
 * mongo
 
+Het is ook heel belangrijk dat als je het script mongo.py wil runnen je in dezelfde map zit als waar mongo.py staat. Om naar dezelfde map te gaan typ je cd gevolgd door de naam van je repository in Github (bij mij is dit dan cd Databases-advanced). 
 Om het script mongo.py te kunnen runnen gebruik je de commando python3 mongo.py. Om de uitvoering van het script te stoppen, typ je ctrl + c. in de terminal.
 
 ### MongoDB Compass
 Als u een visuele interface wilt, kunt u MongoDB Compass installeren. Hiervoor gebruik je de volgende commandos: 
 * apt-get update
-* wget https://downloads.mongodb.com/compass/mongodb-compass_1.15.1_amd64.deb
-* sudo dpkg -i mongodb-compass_1.15.1_amd64.deb
+* wget https://dowloads.mongodb.com/compass/mongodb-compass_1.26.1_amd64.deb
+* sudo dpkg -i mongodb-compass_1.26.1_amd64.deb
+
+Ga nu naar applications op Ubuntu en selecteer MongoDB Compass. MongoDB Compass wordt geopend. 
+Om te connecteren klik je op Connect en Connect to... Je kan op 2 manieren connecteren:
+* door een connectie string te plakken in de balk die er verschijnt en dan op Connect te drukken of
+* klik op Fill in connection fields individually. Er verschijnt een scherm waar je hostname en port kan invullen. Ik heb bij hostname localhost ingevuld en bij port 27017. Verder heb ik ook SRV record afgevinkt en authentication op None gezet. Druk op Connect.
+
+Nu krijg je een overzicht van alle databases. Zodra je op een database klikt krijg je een scherm met de collections van die database.
 
 
 # Opdracht 3: Redis
