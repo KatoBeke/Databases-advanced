@@ -1,10 +1,10 @@
 # Databases-advanced
 Deze repository is onderdeel van een opdracht voor het vak Databases Advanced. Tijdens deze opdrachten leerden we werken met MongoDB, Redis, Docker, Ubuntu, ... Om deze opdracht overzichtelijk te houden werd de opdracht opgesplitst in meerdere kleine opdrachten.
-# Opdracht 1: Scraper (scraper.py)
+## Opdracht 1: Scraper (scraper.py)
 Ik heb de volgende website gebruikt om te scrapen: https://www.blockchain.com/btc/unconfirmed-transactions <br>
 Ik heb hiervan de hash, time, btc en usd gescrapet. Daarna heb ik de hash, time, btc en usd van de meest waardevolle Hash voor Bitcoin per minuut in USD gezocht en dit in een dataframe gezet. Tenslotte heb ik dit dan toegevoegd aan result.log.
 
-## Ubuntu
+### Ubuntu
 Het doel van deze opdracht is om de scraper te runnen op Ubuntu Virtual Machine. 
 Ik heb mijn script op mijn Windows pc gemaakt. Download deze repository op Ubuntu via de commando git clone met de link https://github.com/KatoBeke/Databases-advanced.git. <br> 
 
@@ -17,12 +17,12 @@ Daarnaast moet je ook pip, pandas en bs4 installeren. Je kan dit doen door de vo
 Het is ook heel belangrijk dat als je het script **scraper.py** wil runnen je in dezelfde map zit als waar **scraper.py** staat. Om naar dezelfde map te gaan typ je cd Databases-advanced. <br> <br>
 Om het script **scraper.py** te kunnen runnen gebruik je de commando python3 scraper.py. Om de uitvoering van het script te stoppen, typ je ctrl + c in de terminal.
 
-# Opdracht 2: Mongo (mongo.py, bash.sh en mongo.sh)
+## Opdracht 2: Mongo (mongo.py, bash.sh en mongo.sh)
 Het doel van deze opdracht is de data uit de vorige opdracht in MongoDB plaatsen. 
 
-## Ubuntu
+### Ubuntu
 Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt geüpdatet!!! Dit doe je via de commando git pull met de link https://github.com/KatoBeke/Databases-advanced.git. <br> 
-### MongoDB
+#### MongoDB
 Om **MongoDB** te installeren moet je de volgende commando's gebruiken (of gebruik **bash.sh** van de map Bash scripts):
 * sudo apt install curl
 * curl -fsSL https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
@@ -45,7 +45,7 @@ Om **mongo.py** te kunnen gebruiken en dus mongo te runnen, moet je de volgende 
 Het is ook heel belangrijk dat als je het script **mongo.py** wil runnen je in dezelfde map zit als waar **mongo.py** staat. Om naar dezelfde map te gaan typ je cd Databases-advanced. <br> <br>
 Om het script **mongo.py** te kunnen runnen gebruik je de commando python3 mongo.py. Om de uitvoering van het script te stoppen, typ je ctrl + c in de terminal.
 
-### MongoDB Compass
+#### MongoDB Compass
 Als u een visuele interface wilt, kunt u MongoDB Compass installeren. Hiervoor gebruik je de volgende commando's: 
 * apt-get update
 * wget https://dowloads.mongodb.com/compass/mongodb-compass_1.26.1_amd64.deb
@@ -60,13 +60,13 @@ Nu krijg je een overzicht van alle databases. Zodra je op een database klikt kri
 Zodra je het script **mongo.py** begint te runnen wordt elke minuut de meest waardevolle Hash voor Bitcoin per minuut in USD aan deze database en collection toegevoegd. Het ziet er als volgt uit:
 ![image](https://user-images.githubusercontent.com/74418649/114557525-0cca8f00-9c6a-11eb-9eb4-9b70f092727d.png)
 
-# Opdracht 3: Redis (redis.py, redToMongo.py en redis.sh)
+## Opdracht 3: Redis (redis.py, redToMongo.py en redis.sh)
 Heel deze opdracht draait om de beschikbaarheid van de gegevens tijdens de uitvoering van de scripts **redis.py** en **redToMongo.py**. Redis is een key-value paired database die ik gebruik om mijn geschraapte data tijdelijk te cachen. Het doel van deze opdracht is om de data die ik heb gescrapet (scraper.py) onmiddellijk bewaar in een Redis-database. Deze Redis-database houdt deze data slechts 1 minuut bij. Als de data zich in mijn Redis-databank bevindt, haalt mijn redis.py de data uit de Redis-databank en filtert de data zodat enkel de hash met de hoogste waarde in USD overblijft. Vervolgens wordt de hash met de hoogste waarde in USD definitief opgeslagen in een database van MongoDB. Als de data is opgeslagen in de MongoDB-database wordt de data uit de Redis-database verwijderd. Heel dit proces gebeurt om de 1 minuut.
 
-## Ubuntu
+### Ubuntu
 Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt geüpdatet!!! Dit doe je via de commando git pull met de link https://github.com/KatoBeke/Databases-advanced.git. <br> 
 
-### Redis
+#### Redis
 Om **Redis** te installeren moet je de volgende commando's gebruiken (of gebruik **redis.sh** van de map Bash scripts):
 * sudo apt update
 * sudo apt install redis-server
@@ -86,9 +86,9 @@ Om **redis.py** en **redToMongo.py** te kunnen gebruiken en dus mongo te runnen,
 Het is ook heel belangrijk dat als je de script **redis.py** en **redToMongo.py** wil runnen je in dezelfde map zit als waar **redis.py** en **redToMongo.py** staan. Om naar dezelfde map te gaan typ je cd Databases-advanced. <br> <br>
 Om de scripts **redis.py** en **redToMongo.py** te kunnen runnen gebruik je de commando's python3 redis.py en python3 redToMongo.py. Om de uitvoering van de scripts te stoppen, typ je ctrl + c in de terminal.
 
-### MongoDB Compass
+#### MongoDB Compass
 Als u een visuele interface wilt, kunt u MongoDB Compass installeren. Zie Opdracht 2!!!
 
-# Opdracht 4: Docker Images
+## Opdracht 4: Docker Images
 
-# Opdracht 5: Container Orchestration
+## Opdracht 5: Container Orchestration
