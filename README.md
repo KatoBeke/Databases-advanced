@@ -24,8 +24,7 @@ Het doel van deze opdracht is de data uit de vorige opdracht in MongoDB plaatsen
 Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt geüpdatet!!! Dit doe je via de commando git pull met de link https://github.com/KatoBeke/Databases-advanced.git. <br> 
 ### MongoDB
 Ik heb mijn scraper aangepast en dit een nieuwe naam gegeven namelijk mongo.py. <br> <br>
-Om MongoDB te installeren en daarna te kunnen werken met mongo.py moet je de volgende commandos gebruiken:
-* pip3 install pymongo
+Om MongoDB te installeren moet je de volgende commandos gebruiken:
 * sudo apt install curl
 * curl -fsSL https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
 * echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
@@ -36,7 +35,16 @@ Om MongoDB te installeren en daarna te kunnen werken met mongo.py moet je de vol
 * sudo systemctl enable mongod
 * mongo --eval 'db.runCommand({ connectionStatus: 1 })'
 
+Om mongo.py te kunnen gebruiken en dus mongo te runnen, moet je de volgende commandos gebruiken:
+*  pip3 install pymongo
+*  cd < mongodb installation dir >/ bin
+*  mongo
+
 Om het script mongo.py te kunnen runnen gebruik je de commando python3 mongo.py. Om de uitvoering van het script te stoppen, typ je ctrl + c. in de terminal.
+
+### MongoDB Compass
+If you want a visual interface, you can install MongoDB Compass.
+
 
 # Opdracht 3: Redis
 
