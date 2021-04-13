@@ -1,4 +1,5 @@
 # Databases-advanced
+Deze repository is onderdeel van een opdracht voor het vak Databases Advanced. Tijdens deze opdrachten leerden we werken met MongoDB, Redis, Docker, Ubuntu, ... Om deze opdracht overzichtelijk te houden werd de opdracht opgesplitst in meerdere kleine opdrachten.
 # Opdracht 1: Scraper (scraper.py)
 Ik heb de volgende website gebruikt om te scrapen: https://www.blockchain.com/btc/unconfirmed-transactions <br>
 Ik heb hiervan de hash, time, btc en usd gescrapet. Daarna heb ik de hash, time, btc en usd van de meest waardevolle Hash voor Bitcoin per minuut in USD gezocht en dit in een dataframe gezet. Tenslotte heb ik dit dan toegevoegd aan result.log.
@@ -13,7 +14,7 @@ Daarnaast moet je ook pip, pandas en bs4 installeren. Je kan dit doen door de vo
 * pip3 install pandas
 * pip3 install bs4 
 
-Het is ook heel belangrijk dat als je het script **scraper.py** wil runnen je in dezelfde map zit als waar **scraper.py** staat. Om naar dezelfde map te gaan typ je cd gevolgd door de naam van je repository in Github (bij mij is dit dan cd Databases-advanced). <br>
+Het is ook heel belangrijk dat als je het script **scraper.py** wil runnen je in dezelfde map zit als waar **scraper.py** staat. Om naar dezelfde map te gaan typ je cd gevolgd door de naam van je repository in Github (bij mij is dit dan cd Databases-advanced). <br> <br>
 Om het script **scraper.py** te kunnen runnen gebruik je de commando python3 scraper.py. Om de uitvoering van het script te stoppen, typ je ctrl + c. in de terminal.
 
 # Opdracht 2: Mongo (mongo.py, bash.sh en mongo.sh)
@@ -40,7 +41,7 @@ Om **mongo.py** te kunnen gebruiken en dus mongo te runnen, moet je de volgende 
 * cd < mongodb installation dir >/ bin
 * mongo
 
-Het is ook heel belangrijk dat als je het script **mongo.py** wil runnen je in dezelfde map zit als waar **mongo.py** staat. Om naar dezelfde map te gaan typ je cd gevolgd door de naam van je repository in Github (bij mij is dit dan cd Databases-advanced). <br>
+Het is ook heel belangrijk dat als je het script **mongo.py** wil runnen je in dezelfde map zit als waar **mongo.py** staat. Om naar dezelfde map te gaan typ je cd gevolgd door de naam van je repository in Github (bij mij is dit dan cd Databases-advanced). <br> <br>
 Om het script **mongo.py** te kunnen runnen gebruik je de commando python3 mongo.py. Om de uitvoering van het script te stoppen, typ je ctrl + c. in de terminal.
 
 ### MongoDB Compass
@@ -59,8 +60,34 @@ Nu krijg je een overzicht van alle databases. Zodra je op een database klikt kri
 Ik heb op de database highest_hashes gedrukt en op de collection values. Nu wordt elke minuut de meest waardevolle Hash voor Bitcoin per minuut in USD aan deze database en collection toegevoegd. Het ziet er uit als een json-file:
 ![image](https://user-images.githubusercontent.com/74418649/114557525-0cca8f00-9c6a-11eb-9eb4-9b70f092727d.png)
 
-# Opdracht 3: Redis
+# Opdracht 3: Redis (redis.py en redis.sh)
+Heel deze opdracht draait om de beschikbaarheid van de gegevens tijdens de uitvoering van het script **redis.py**. Redis is een key-value paired database die ik gebruik om mijn geschraapte data tijdelijk te cachen. Het doel van deze opdracht is om de data die ik uit mijn scraper heb gehaald (scraper.py) onmiddellijk bewaar in een Redis-database. Deze Redis-database houdt deze data slechts 1 minuut bij. Als de data zich in mijn Redis-databank bevindt, haalt mijn redis.py de data uit de Redis-databank en filtert de data zodat enkel de hash met de hoogste waarde in USD overblijft. Vervolgens wordt de hash met de hoogste waarde in USD definitief opgeslagen in een database van MongoDB. Als de data is opgeslagen in de MongoDB-database wordt de data uit de Redis-database verwijderd. Heel dit proces gebeurt om de 1 minuut.
 
+## Ubuntu
+Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt geüpdatet!!! Dit doe je via de commando git pull met de link https://github.com/KatoBeke/Databases-advanced.git. <br> 
+
+### Redis
+Om **Redis** te installeren moet je de volgende commando's gebruiken (of gebruik **redis.sh** van de map Bash scripts):
+* sudo apt update
+* sudo apt install redis-server
+* sudo systemctl status redis-server
+
+Om **Redis** te starten gebruik je de commando's (of gebruik **redis.sh** van de map Bash scripts):
+* cd src
+* redis - server
+* redis - cli ping
+* redis - cli
+* redis 127.0.0.1:6379 > ping
+
+Ik heb mijn scraper aangepast en dit een nieuwe naam gegeven namelijk **redis.py**. <br>
+Om **redis.py** te kunnen gebruiken en dus mongo te runnen, moet je de volgende commando's gebruiken:
+* 
+
+Het is ook heel belangrijk dat als je het script **redis.py** wil runnen je in dezelfde map zit als waar **redis.py** staat. Om naar dezelfde map te gaan typ je cd gevolgd door de naam van je repository in Github (bij mij is dit dan cd Databases-advanced). <br> <br>
+Om het script **redis.py** te kunnen runnen gebruik je de commando python3 redis.py. Om de uitvoering van het script te stoppen, typ je ctrl + c. in de terminal.
+
+### MongoDB
+Zie Opdracht 2
 # Opdracht 4: Docker Images
 
 # Opdracht 5: Container Orchestration
