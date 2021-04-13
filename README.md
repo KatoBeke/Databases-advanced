@@ -24,15 +24,13 @@ Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt 
 ### MongoDB
 Ik heb mijn scraper aangepast en dit een nieuwe naam gegeven namelijk mongo.py. <br> <br>
 Om MongoDB te installeren moet je de volgende commando's gebruiken:
-* sudo apt install curl
-* curl -fsSL https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+* sudo apt-get install gnupg
+* wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
 * echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
-* sudo apt update
-* sudo apt install mongodb-org
-* sudo systemctl start mongod.service
-* sudo systemctl status mongod
-* sudo systemctl enable mongod
-* mongo --eval 'db.runCommand({ connectionStatus: 1 })'
+* sudo apt-get update
+* sudo apt-get install -y mongodb-org
+* sudo systemctl daemon-reload
+--> je kan deze commando's ook vinden in bash.sh in de map Bash scripts
 
 Om mongo.py te kunnen gebruiken en dus mongo te runnen, moet je de volgende commando's gebruiken:
 * pip3 install pymongo 
