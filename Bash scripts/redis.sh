@@ -9,11 +9,13 @@ sudo apt update
 sudo apt install redis-server
 sudo systemctl status redis-server
 
-#Dit zijn de commando's om redis te starten te starten
+#Dit zijn de commando's om redis te starten
+sudo systemctl start redis
 cd src
 redis - server
 redis - cli ping
-PONG
 redis - cli
 redis 127.0.0.1:6379 > ping
-PONG
+
+#Dit is de commando om redis te stoppen 
+sudo systemctl stop redis
