@@ -86,8 +86,9 @@ Om **redis.py** en **redToMongo.py** te kunnen gebruiken en dus mongo te runnen,
 Het is ook heel belangrijk dat als je de script **redis.py** en **redToMongo.py** wil runnen je in dezelfde map zit als waar **redis.py** en **redToMongo.py** staan. Om naar dezelfde map te gaan typ je cd Databases-advanced. <br> <br>
 Om de scripts **redis.py** en **redToMongo.py** te kunnen runnen gebruik je de commando's python3 redis.py en python3 redToMongo.py. Om de uitvoering van de scripts te stoppen, typ je ctrl + c in de terminal.
 
-### MongoDB
-Zie Opdracht 2!!!
+### MongoDB Compass
+Als u een visuele interface wilt, kunt u MongoDB Compass installeren. Zie Opdracht 2!!!
+
 # Opdracht 4: Docker Images
 
 # Opdracht 5: Container Orchestration
