@@ -36,9 +36,9 @@ Om MongoDB te installeren moet je de volgende commandos gebruiken:
 * mongo --eval 'db.runCommand({ connectionStatus: 1 })'
 
 Om mongo.py te kunnen gebruiken en dus mongo te runnen, moet je de volgende commandos gebruiken:
-*  pip3 install pymongo
-*  cd < mongodb installation dir >/ bin
-*  mongo
+* pip3 install pymongo
+* cd < mongodb installation dir >/ bin
+* mongo
 
 Om het script mongo.py te kunnen runnen gebruik je de commando python3 mongo.py. Om de uitvoering van het script te stoppen, typ je ctrl + c. in de terminal.
 
