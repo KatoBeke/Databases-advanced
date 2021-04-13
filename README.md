@@ -40,7 +40,7 @@ Om **mongo.py** te kunnen gebruiken en dus mongo te runnen, moet je de volgende 
 * cd < mongodb installation dir >/ bin
 * mongo
 
-Het is ook heel belangrijk dat als je het script mongo.py wil runnen je in dezelfde map zit als waar mongo.py staat. Om naar dezelfde map te gaan typ je cd gevolgd door de naam van je repository in Github (bij mij is dit dan cd Databases-advanced). <br>
+Het is ook heel belangrijk dat als je het script **mongo.py** wil runnen je in dezelfde map zit als waar **mongo.py** staat. Om naar dezelfde map te gaan typ je cd gevolgd door de naam van je repository in Github (bij mij is dit dan cd Databases-advanced). <br>
 Om het script **mongo.py** te kunnen runnen gebruik je de commando python3 mongo.py. Om de uitvoering van het script te stoppen, typ je ctrl + c. in de terminal.
 
 ### MongoDB Compass
