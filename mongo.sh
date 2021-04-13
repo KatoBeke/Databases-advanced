@@ -1,3 +1,3 @@
-#Dit zijn de commandos om MongoDB te starten
+#Dit zijn de commando's om MongoDB te starten
 sudo systemctl start mongod
 sudo systemctl status mongod
