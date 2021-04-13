@@ -24,16 +24,17 @@ Het doel van deze opdracht is de data uit de vorige opdracht in MongoDB plaatsen
 Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt geüpdatet!!! Dit doe je via de commando git pull met de link https://github.com/KatoBeke/Databases-advanced.git. <br> 
 ### MongoDB
 Om **MongoDB** te installeren moet je de volgende commando's gebruiken (of gebruik **bash.sh** van de map Bash scripts):
-* sudo apt-get install gnupg
-* wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+* sudo apt install curl
+* curl -fsSL https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
 * echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
-* sudo apt-get update
-* sudo apt-get install -y mongodb-org
-* sudo systemctl daemon-reload
+* sudo apt update
+* sudo apt install mongodb-org
 
 Om **MongoDB** te starten gebruik je de commando's (of gebruik **mongo.sh** van de map Bash scripts):
 * sudo systemctl start mongod
 * sudo systemctl status mongod
+* sudo systemctl enable mongod
+* mongo --eval 'db.runCommand({ connectionStatus: 1 })'
 
 Ik heb mijn scraper aangepast en dit een nieuwe naam gegeven namelijk **mongo.py**. <br>
 Om **mongo.py** te kunnen gebruiken en dus mongo te runnen, moet je de volgende commando's gebruiken:
@@ -81,7 +82,7 @@ Om **Redis** te starten gebruik je de commando's (of gebruik **redis.sh** van de
 
 Ik heb mijn scraper aangepast en dit een nieuwe naam gegeven namelijk **redis.py**. <br>
 Om **redis.py** te kunnen gebruiken en dus mongo te runnen, moet je de volgende commando's gebruiken:
-* 
+* pip3 install redis 
 
 Het is ook heel belangrijk dat als je het script **redis.py** wil runnen je in dezelfde map zit als waar **redis.py** staat. Om naar dezelfde map te gaan typ je cd gevolgd door de naam van je repository in Github (bij mij is dit dan cd Databases-advanced). <br> <br>
 Om het script **redis.py** te kunnen runnen gebruik je de commando python3 redis.py. Om de uitvoering van het script te stoppen, typ je ctrl + c. in de terminal.
