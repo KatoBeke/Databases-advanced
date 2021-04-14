@@ -68,8 +68,7 @@ Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt 
 
 #### Redis
 Om **Redis** te installeren moet je de volgende commando's gebruiken (of gebruik **redis.sh** van de map Bash scripts):
-* sudo apt update
-* sudo apt install redis-server
+* sudo apt-get install redis-server
 * sudo systemctl status redis-server
 
 Om **Redis** te starten gebruik je het commando _sudo systemctl start redis_ (of gebruik **redis.sh** van de map Bash scripts).
@@ -84,7 +83,7 @@ Het is ook heel belangrijk dat als je de script **redis.py** en **redToMongo.py*
 Om de scripts **redis.py** en **redToMongo.py** te kunnen runnen gebruik je de commando's python3 redis.py en python3 redToMongo.py. Om de uitvoering van de scripts te stoppen, typ je ctrl + c in de terminal.
 
 #### MongoDB Compass
-Als u een visuele interface wilt, kunt u MongoDB Compass installeren. Zie Opdracht 2!!!
+Als u een visuele interface wilt, kunt u MongoDB Compass installeren. Zie Opdracht 2!!! ~
 
 ## Opdracht 4: Docker Images
 
