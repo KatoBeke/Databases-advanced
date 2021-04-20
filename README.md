@@ -60,8 +60,8 @@ Nu krijg je een overzicht van alle databases. Zodra je op een database klikt kri
 Zodra je het script **mongo.py** begint te runnen wordt elke minuut de meest waardevolle Hash voor Bitcoin per minuut in USD aan deze database en collection toegevoegd. Het ziet er als volgt uit:
 ![image](https://user-images.githubusercontent.com/74418649/114557525-0cca8f00-9c6a-11eb-9eb4-9b70f092727d.png)
 
-## Opdracht 3: Redis (redis.py, redToMongo.py en redis.sh)
-Heel deze opdracht draait om de beschikbaarheid van de gegevens tijdens de uitvoering van de scripts **redis.py** en **redToMongo.py**. Redis is een key-value paired database die ik gebruik om mijn gescrapete data tijdelijk te bewaren. Het doel van deze opdracht is om de data die ik heb gescrapet (scraper.py) onmiddellijk te bewaren in een Redis-database (**redis.py**). Deze Redis-database houdt deze data slechts 1 minuut bij (**redis.py**). Als de data zich in mijn Redis-databank bevindt, haalt mijn **redToMongo.py** de data uit de Redis-databank en filtert de data zodat enkel de hash met de hoogste waarde in USD overblijft. Vervolgens wordt de hash met de hoogste waarde in USD definitief opgeslagen in een database van MongoDB. Als de data is opgeslagen in de MongoDB-database wordt de data uit de Redis-database verwijderd. Heel dit proces gebeurt om de 1 minuut.
+## Opdracht 3: Redis (red.py, redToMongo.py en redis.sh)
+Heel deze opdracht draait om de beschikbaarheid van de gegevens tijdens de uitvoering van de scripts **red.py** en **redToMongo.py**. Redis is een key-value paired database die ik gebruik om mijn gescrapete data tijdelijk te bewaren. Het doel van deze opdracht is om de data die ik heb gescrapet (scraper.py) onmiddellijk te bewaren in een Redis-database (**red.py**). Deze Redis-database houdt deze data slechts 1 minuut bij (**red.py**). Als de data zich in mijn Redis-databank bevindt, haalt mijn **redToMongo.py** de data uit de Redis-databank en filtert de data zodat enkel de hash met de hoogste waarde in USD overblijft. Vervolgens wordt de hash met de hoogste waarde in USD definitief opgeslagen in een database van MongoDB. Als de data is opgeslagen in de MongoDB-database wordt de data uit de Redis-database verwijderd. Heel dit proces gebeurt om de 1 minuut.
 
 ### Ubuntu
 Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt geüpdatet!!! Dit doe je via de commando git pull met de link https://github.com/KatoBeke/Databases-advanced.git. <br> 
@@ -75,12 +75,12 @@ Om **Redis** te starten gebruik je het commando _sudo systemctl start redis_ (of
 
 Om **Redis** te stoppen gebruik je het commando _sudo systemctl stop redis_ (of gebruik **redis.sh** van de map Bash scripts).
 
-Voor deze opdracht heb ik 2 Python scripts namelijk **redis.py** en **redToMongo.py**. Gebruik het script **redis.py** om de gescrapete data in te voeren in de Redis-databank. Gebruik het script **redToMongo.py** om uit de Redis-databank de hash met de hoogste waarde in USD per minuut te halen en in te voeren in de MongoDB database. <br>
-Om **redis.py** en **redToMongo.py** te kunnen gebruiken en dus mongo te runnen, moet je de volgende commando's gebruiken:
+Voor deze opdracht heb ik 2 Python scripts namelijk **red.py** en **redToMongo.py**. Gebruik het script **red.py** om de gescrapete data in te voeren in de Redis-databank. Gebruik het script **redToMongo.py** om uit de Redis-databank de hash met de hoogste waarde in USD per minuut te halen en in te voeren in de MongoDB database. <br>
+Om **red.py** en **redToMongo.py** te kunnen gebruiken en dus mongo te runnen, moet je de volgende commando's gebruiken:
 * pip3 install redis 
 
-Het is ook heel belangrijk dat als je de script **redis.py** en **redToMongo.py** wil runnen je in dezelfde map zit als waar **redis.py** en **redToMongo.py** staan. Om naar dezelfde map te gaan typ je cd Databases-advanced. <br> <br>
-Om de scripts **redis.py** en **redToMongo.py** te kunnen runnen gebruik je de commando's python3 redis.py en python3 redToMongo.py. Om de uitvoering van de scripts te stoppen, typ je ctrl + c in de terminal.
+Het is ook heel belangrijk dat als je de script **red.py** en **redToMongo.py** wil runnen je in dezelfde map zit als waar **red.py** en **redToMongo.py** staan. Om naar dezelfde map te gaan typ je cd Databases-advanced. <br> <br>
+Om de scripts **red.py** en **redToMongo.py** te kunnen runnen gebruik je de commando's python3 redis.py en python3 redToMongo.py. Om de uitvoering van de scripts te stoppen, typ je ctrl + c in de terminal.
 
 #### MongoDB Compass
 Als u een visuele interface wilt, kunt u MongoDB Compass installeren. Zie Opdracht 2!!! ~
