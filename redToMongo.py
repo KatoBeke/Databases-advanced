@@ -7,8 +7,8 @@ import pymongo as mongo
 import json
 import redis
 
-#Connectie maken met redis
-r = redis.Redis()
+#Connecteren met Redis
+connectie = redis.Redis()
 
 #MongoDB
 client = mongo.MongoClient("mongodb://localhost:27017") #Connecteren met Mongo
@@ -23,7 +23,7 @@ btc = []
 usd = []
 
 def toMongo(connectie, hoogste_hashes):
-    data = r.get('data')
+    data = connectie.get('data')
     result = pd.read_json(data)
      #Dataframe sorteren volgens USD
     hoogste = result.sort_values(by=['USD'], ascending=True)
