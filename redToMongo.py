@@ -8,9 +8,9 @@ import json
 import redis
 
 #Connecteren met Redis
-connectie = redis.Redis()
+connectie = redis.Redis(host='localhost', port=6379, db=0)
 
-#MongoDB
+#Connecteren met MongoDB
 client = mongo.MongoClient("mongodb://localhost:27017") #Connecteren met Mongo
 database = client["highest_hashes"] #Een naam kiezen voor de database
 hoogste_hashes = database["values"] #Een naam kiezen voor de data uit de database (collection)
@@ -25,16 +25,13 @@ usd = []
 def toMongo(connectie, hoogste_hashes):
     data = connectie.get('data')
     result = pd.read_json(data)
-     #Dataframe sorteren volgens USD
+    #Dataframe sorteren volgens USD
     hoogste = result.sort_values(by=['USD'], ascending=True)
     #De laatste rij is de hash met de hoogste waarde in USD
     hoogste = hoogste.tail(1)
 
-    #MongoDB
-    client = mongo.MongoClient("mongodb://localhost:27017") #Connecteren met Mongo
-    database = client["highest_hashes"] #Een naam kiezen voor de database
-    hoogste_hashes = database["values"] #Een naam kiezen voor de data uit de database (collection)
-    hoogste_hashes.insert_one(hoogste) #Data invoeren in de database van MongoDB
+    #Hash met de hoogste waarde in USD toevoegen aan de database van MongoDB
+    hoogste_hashes.insert_one(hoogste)
 
     
 #Elke minuut alles herhalen
