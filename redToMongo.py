@@ -8,7 +8,7 @@ import json
 import redis
 
 #Connecteren met Redis
-connectie = redis.Redis(host='localhost', port=6379, db=0)
+connectie = redis.Redis()
 
 #Connecteren met MongoDB
 client = mongo.MongoClient("mongodb://localhost:27017") #Connecteren met Mongo
