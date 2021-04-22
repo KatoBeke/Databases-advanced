@@ -23,18 +23,31 @@ btc = []
 usd = []
 
 def toMongo(connectie, hoogste_hashes):
-    data = connectie.get('data')
-    result = pd.read_json(data)
-    #Dataframe sorteren volgens USD
-    hoogste = result.sort_values(by=['USD'], ascending=True)
-    #De laatste rij is de hash met de hoogste waarde in USD
-    hoogste = hoogste.tail(1)
+    data1 = connectie.get('data')
+    print(data1)
+    print(type(data1),"datatype")
 
+    #data_df = pd.DataFrame(data1,colums=['Hash'],'Time','BTC','USD'])
+    #df = pd.DataFrame(data=data1)
+    #print(df)
+    #data = pd.DataFrame(colums=['Hash'],'Time','BTC','USD'])
+    #data.append({'Hash': hashen, 'Time': Time, 'BTC': btc, 'USD': usd}, ignore_index=True)
+    #result = pd.read_json(data)
+
+    #Dataframe sorteren volgens USD
+    #hoogste = result.sort_values(by=['USD'], ascending=False)
+    #De eerste rij is de hash met de hoogste waarde in USD
+    #hoogste = hoogste.head(1)
+    #print(hoogste)
+
+    #Hash met de hoogste waarde in USD converteren naar json
+    #json_data = hoogste.to_json(orient="records").replace('[','').replace(']','')
+    #invoer = json.loads(json_data)
     #Hash met de hoogste waarde in USD toevoegen aan de database van MongoDB
-    hoogste_hashes.insert_one(hoogste)
+    #hoogste_hashes.insert_one(invoer)
 
     
 #Elke minuut alles herhalen
 while True: 
-    toMongo(connectie, hoogste_hashes)
     time.sleep(60)
+    toMongo(connectie, hoogste_hashes)
