@@ -52,7 +52,7 @@ def getTransactions():
         data = data.append({'Hash': hashen, 'Time': Time, 'BTC': btc, 'USD': usd}, ignore_index=True)
         
         #Dataframe invoegen naar Redis
-        connectie.setex('data', 90, data.to_json())
+        connectie.setex('data', 70, data.to_json())
         
 #Elke minuut alles herhalen
 while True: 
