@@ -19,25 +19,29 @@ hoogste_hashes = database["values"] #Een naam kiezen voor de data uit de databas
 def toMongo(connectie, hoogste_hashes):
     #Data halen uit Redis
     data1 = connectie.get('data')
-    
-    #Data inlezen als json
-    data_string = data1.decode('utf-8')
-    json_data = json.loads(data_string)
 
-    #Json converteren naar dataframe    
-    df = pd.DataFrame(json_data)
+    if data1 is None:
+        print(data1)
 
-    #Dataframe sorteren volgens USD
-    hoogste = df.sort_values(by=['USD'], ascending=False)
-    #De eerste rij is de hash met de hoogste waarde in USD
-    hoogste = hoogste.head(1)
-    #print(hoogste)
+    else:
+        #Data inlezen als json
+        data_string = data1.decode('utf-8')
+        json_data = json.loads(data_string)
 
-    #Hash met de hoogste waarde in USD converteren naar json
-    json_data = hoogste.to_json(orient="records").replace('[','').replace(']','')
-    invoer = json.loads(json_data)
-    #Hash met de hoogste waarde in USD toevoegen aan de database van MongoDB
-    hoogste_hashes.insert_one(invoer)
+        #Json converteren naar dataframe    
+        df = pd.DataFrame(json_data)
+
+        #Dataframe sorteren volgens USD
+        hoogste = df.sort_values(by=['USD'], ascending=False)
+        #De eerste rij is de hash met de hoogste waarde in USD
+        hoogste = hoogste.head(1)
+        #print(hoogste)
+
+        #Hash met de hoogste waarde in USD converteren naar json
+        json_data = hoogste.to_json(orient="records").replace('[','').replace(']','')
+        invoer = json.loads(json_data)
+        #Hash met de hoogste waarde in USD toevoegen aan de database van MongoDB
+        hoogste_hashes.insert_one(invoer)
 
 #Elke minuut alles herhalen
 while True: 
