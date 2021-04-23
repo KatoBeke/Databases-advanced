@@ -7,7 +7,7 @@ import pymongo as mongo
 import redis
 
 #Connecteren met Redis
-connectie = redis.Redis(host='localhost', port=6379, db=0)
+connectie = redis.Redis()
 
 #Functie maken voor alle rijen met hash, tijd, btc en usd uit url te halen
 def getBlockchain():
@@ -28,7 +28,7 @@ result = []
 #Functie om hash, tijd, btc en usd van de url te krijgen
 def getTransactions():
     blockchain = getBlockchain()
-    data = pd.DataFrame(columns=['Hash','Time', 'BTC', 'USD']) #Dataframe aanmaken en kolommen een naam geven
+    #data = pd.DataFrame(columns=['Hash','Time', 'BTC', 'USD']) #Dataframe aanmaken en kolommen een naam geven
     for item in blockchain:
         Hash = item.find_all("a", {"class": "sc-1r996ns-0 fLwyDF sc-1tbyx6t-1 kCGMTY iklhnl-0 eEewhk d53qjk-0 ctEFcK"})[0].text
         time = item.find_all("span", {"class": "sc-1ryi78w-0 cILyoi sc-16b9dsl-1 ZwupP u3ufsr-0 eQTRKC"})[0].text
@@ -52,7 +52,7 @@ def getTransactions():
         data = data.append({'Hash': hashen, 'Time': Time, 'BTC': btc, 'USD': usd}, ignore_index=True)
         
         #Dataframe invoegen naar Redis
-        connectie.setex('data', 60, data.to_json())
+        connectie.setex('data', 90, data.to_json())
         
 #Elke minuut alles herhalen
 while True: 
