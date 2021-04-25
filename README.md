@@ -86,5 +86,15 @@ Om de scripts **red.py** en **redisToMongo.py** te kunnen runnen gebruik je de c
 Als u een visuele interface wilt, kunt u MongoDB Compass installeren. Zie Opdracht 2!!!
 
 ## Opdracht 4: Docker Images
+Het doel van deze opdracht is het project omzetten in containers. Op deze manier kan je elk onderdeel in een docker container runnen. Hierdoor kan je dit project overal draaien waar je ook maar wilt. 
 Het doel van deze opdracht is de bestaande containers van mongo en redis runnen op Ubuntu. Hiervoor moet je een account aanmaken via https://hub.docker.com/.
+
+### Docker
+Als je Windows of MacOS gebruikt moet je via https://www.docker.com/products/docker-desktop Docker installeren.
+Als je Linux hebt moet ik je in je Ubuntu terminal het volgende ingeven: sudo apt install docker.io.
+Je moet ook sowieso een account aanmaken via https://hub.docker.com/. 
+
+Om de containers van mongo en redis te runnen op Ubuntu ga je naar de volgende sites:
+* https://hub.docker.com/_/mongo (commando docker pull mongo)
+* https://hub.docker.com/_/redis (commando docker pull redis)
 ## Opdracht 5: Container Orchestration
