@@ -89,12 +89,46 @@ Als u een visuele interface wilt, kunt u MongoDB Compass installeren. Zie Opdrac
 Het doel van deze opdracht is het project omzetten in containers. Op deze manier kan je elk onderdeel in een docker container runnen. Hierdoor kan je dit project overal draaien waar je ook maar wilt. 
 Het doel van deze opdracht is de bestaande containers van mongo en redis runnen op Ubuntu. Hiervoor moet je een account aanmaken via https://hub.docker.com/.
 
-### Docker
+### Ubuntu
+Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt geüpdatet!!! Dit doe je via de commando git pull met de link https://github.com/KatoBeke/Databases-advanced.git. <br> 
+
+#### Docker
 Als je Windows of MacOS gebruikt moet je via https://www.docker.com/products/docker-desktop Docker installeren.
 Als je Linux hebt moet ik je in je Ubuntu terminal het volgende ingeven: sudo apt install docker.io.
 Je moet ook sowieso een account aanmaken via https://hub.docker.com/. 
 
+##### MongoDB & Redis
 Om de containers van mongo en redis te runnen op Ubuntu ga je naar de volgende sites:
 * https://hub.docker.com/_/mongo (commando docker pull mongo)
 * https://hub.docker.com/_/redis (commando docker pull redis)
+
 ## Opdracht 5: Container Orchestration
+Het doel van deze opdracht is het project omzetten in containers. Op deze manier kan je elk onderdeel in een docker container runnen. Hierdoor kan je dit project overal draaien waar je ook maar wilt. 
+Het doel van deze opdracht van deze opdracht was zelf nieuwe containers maken voor de scraper en filter. Hiervoor moet je een account aanmaken via https://hub.docker.com/.
+Je kan zelf ook je eigen images maken met Dockerfiles of je kan mijn gemaakte images van mijn docker hub profiel halen.
+
+### Ubuntu
+Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt geüpdatet!!! Dit doe je via de commando git pull met de link https://github.com/KatoBeke/Databases-advanced.git. <br> 
+
+#### Docker
+Als je Windows of MacOS gebruikt moet je via https://www.docker.com/products/docker-desktop Docker installeren.
+Als je Linux hebt moet ik je in je Ubuntu terminal het volgende ingeven: sudo apt install docker.io.
+Je moet ook sowieso een account aanmaken via https://hub.docker.com/. 
+
+##### Creër je eigen images
+Maak een Dockerfile met de volgende code en geen extensie. Je kan natuurlijk ook mijn dockerfiles downloaden van mijn Github repository.
+###### Scraper
+
+###### Parser
+
+###### MongoDB & Redis
+Om de containers van mongo en redis te runnen op Ubuntu ga je naar de volgende sites:
+* https://hub.docker.com/_/mongo (commando docker pull mongo)
+* https://hub.docker.com/_/redis (commando docker pull redis)
+
+##### Images pullen
+Ga naar ...
+
+##### Images veranderen naar containers
+
+### Network creëren en containers toevoegen
