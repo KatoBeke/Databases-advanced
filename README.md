@@ -98,30 +98,30 @@ Je moet ook sowieso een account aanmaken via https://hub.docker.com/.
 
 ##### Images Mongo & Redis
 Om de images van mongo en redis te runnen op Ubuntu ga je naar de volgende sites:
-* https://hub.docker.com/_/mongo (commando docker pull mongo)
-* https://hub.docker.com/_/redis (commando docker pull redis)
+* https://hub.docker.com/_/mongo (_commando docker pull mongo_)
+* https://hub.docker.com/_/redis (_commando docker pull redis_)
 
 ##### Alle images opsommen
-Om een overzicht te krijgen van de images gebruik je het commando: docker images.
+Om een overzicht te krijgen van de images gebruik je het commando: _docker images_.
 
 ##### Images verwijderen
-docker rm mongo
-docker rm redisdo
+_docker rm mongo_ <br>
+_docker rm redis_ 
 
 ##### Images veranderen naar containers
-docker run -d --name mongo mongo
-docker run -d --name redis redis
+_docker run -d mmongo_ <br>
+_docker run -d redis_
 
 ##### Alle lopende containers opsommen
-Om een overzicht te krijgen van de containers gebruik je het commando: docker ps.
+Om een overzicht te krijgen van de containers gebruik je het commando: _docker ps_.
 
 ##### Runnende containers stoppen
-docker stop mongo
-docker stop redis
+_docker stop mongo_ <br>
+_docker stop redis__
 
 ##### Containers verwijderen
-docker rm mongo
-docker rm redis
+_docker rm mongo_ <br>
+_docker rm redis_
 
 ## Opdracht 5: Container Orchestration (red.py, redisToMongo.py)
 Het doel van deze opdracht is het project omzetten in containers. Op deze manier kan je elk onderdeel in een docker container runnen. Hierdoor kan je dit project overal draaien waar je ook maar wilt. 
