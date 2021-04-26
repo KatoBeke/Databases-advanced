@@ -98,7 +98,7 @@ Als je Linux hebt moet ik je in je Ubuntu terminal het volgende ingeven: sudo ap
 Je moet ook sowieso een account aanmaken via https://hub.docker.com/. 
 
 ##### MongoDB & Redis
-Om de containers van mongo en redis te runnen op Ubuntu ga je naar de volgende sites:
+Om de images van mongo en redis te runnen op Ubuntu ga je naar de volgende sites:
 * https://hub.docker.com/_/mongo (commando docker pull mongo)
 * https://hub.docker.com/_/redis (commando docker pull redis)
 
@@ -130,5 +130,6 @@ Om de containers van mongo en redis te runnen op Ubuntu ga je naar de volgende s
 Ga naar ...
 
 ##### Images veranderen naar containers
-
+docker run -d --name mongo mongo
+docker run -d --name redis redis
 ### Network creëren en containers toevoegen
