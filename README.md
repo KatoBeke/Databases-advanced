@@ -104,9 +104,9 @@ Om de containers van mongo en redis te runnen op Ubuntu ga je naar de volgende s
 
 ## Opdracht 5: Container Orchestration
 Het doel van deze opdracht is het project omzetten in containers. Op deze manier kan je elk onderdeel in een docker container runnen. Hierdoor kan je dit project overal draaien waar je ook maar wilt. 
-Het doel van deze opdracht van deze opdracht was zelf nieuwe containers maken voor de scraper en filter. Hiervoor moet je een account aanmaken via https://hub.docker.com/.
+Het doel van deze opdracht was zelf nieuwe containers maken voor de scraper en filter. Hiervoor moet je een account aanmaken via https://hub.docker.com/.
 Je kan zelf ook je eigen images maken met Dockerfiles of je kan mijn gemaakte images van mijn docker hub profiel halen.
-
+Ik heb ook mijn scraper aangepast en een py-bestand voor de parser gemaakt (zie map Docker scraper & parser).
 ### Ubuntu
 Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt geüpdatet!!! Dit doe je via de commando git pull met de link https://github.com/KatoBeke/Databases-advanced.git. <br> 
 
