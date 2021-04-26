@@ -6,7 +6,7 @@ import time
 import redis
 
 #Connecteren met Redis
-connectie = redis.Redis()
+connectie = redis.Redis(host='redis', port=6379, db=0)
 
 #Functie maken voor alle rijen met hash, tijd, btc en usd uit url te halen
 def getBlockchain():
