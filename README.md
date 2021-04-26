@@ -86,7 +86,6 @@ Om de scripts **red.py** en **redisToMongo.py** te kunnen runnen gebruik je de c
 Als u een visuele interface wilt, kunt u MongoDB Compass installeren. Zie Opdracht 2!!!
 
 ## Opdracht 4: Docker Images
-Het doel van deze opdracht is het project omzetten in containers. Op deze manier kan je elk onderdeel in een docker container runnen. Hierdoor kan je dit project overal draaien waar je ook maar wilt. 
 Het doel van deze opdracht is de bestaande containers van mongo en redis runnen op Ubuntu. Hiervoor moet je een account aanmaken via https://hub.docker.com/.
 
 ### Ubuntu
@@ -97,10 +96,32 @@ Als je Windows of MacOS gebruikt moet je via https://www.docker.com/products/doc
 Als je Linux hebt moet ik je in je Ubuntu terminal het volgende ingeven: sudo apt install docker.io.
 Je moet ook sowieso een account aanmaken via https://hub.docker.com/. 
 
-##### MongoDB & Redis
+##### Images Mongo & Redis
 Om de images van mongo en redis te runnen op Ubuntu ga je naar de volgende sites:
 * https://hub.docker.com/_/mongo (commando docker pull mongo)
 * https://hub.docker.com/_/redis (commando docker pull redis)
+
+##### Alle images opsommen
+Om een overzicht te krijgen van de images gebruik je het commando: docker images.
+
+##### Images verwijderen
+docker rm mongo
+docker rm redisdo
+
+##### Images veranderen naar containers
+docker run -d --name mongo mongo
+docker run -d --name redis redis
+
+##### Alle lopende containers opsommen
+Om een overzicht te krijgen van de containers gebruik je het commando: docker ps.
+
+##### Runnende containers stoppen
+docker stop mongo
+docker stop redis
+
+##### Containers verwijderen
+docker rm mongo
+docker rm redis
 
 ## Opdracht 5: Container Orchestration (red.py, redisToMongo.py)
 Het doel van deze opdracht is het project omzetten in containers. Op deze manier kan je elk onderdeel in een docker container runnen. Hierdoor kan je dit project overal draaien waar je ook maar wilt. 
@@ -130,6 +151,18 @@ Om de containers van mongo en redis te runnen op Ubuntu ga je naar de volgende s
 Ga naar ...
 
 ##### Images veranderen naar containers
-docker run -d --name mongo mongo
-docker run -d --name redis redis
+docker run -d mongo
+docker run -d redis
+
+##### Alle lopende containers opsommen
+Om een overzicht te krijgen van de containers gebruik je het commando: docker ps.
+
+##### Runnende containers stoppen
+docker stop mongo
+docker stop redis
+
+##### Containers verwijderen
+docker rm mongo
+docker rm redis
+
 ### Network creëren en containers toevoegen
