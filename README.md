@@ -86,6 +86,7 @@ Om de scripts **red.py** en **redisToMongo.py** te kunnen runnen gebruik je de c
 Als u een visuele interface wilt, kunt u MongoDB Compass installeren. Zie Opdracht 2!!!
 
 ## Opdracht 4: Docker Images
+Het doel van deze opdracht is het project omzetten in containers. Op deze manier kan je elk onderdeel in een docker container runnen. Hierdoor kan je dit project overal draaien waar je ook maar wilt. 
 Het doel van deze opdracht is de bestaande containers van mongo en redis runnen op Ubuntu. Hiervoor moet je een account aanmaken via https://hub.docker.com/.
 
 ### Ubuntu
@@ -93,7 +94,7 @@ Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt 
 
 #### Docker
 Als je Windows of MacOS gebruikt moet je via https://www.docker.com/products/docker-desktop Docker installeren.
-Als je Linux hebt moet ik je in je Ubuntu terminal het volgende ingeven: sudo apt install docker.io.
+Als je Linux hebt moet ik je in je Ubuntu terminal het volgende ingeven: _sudo apt install docker.io_.
 Je moet ook sowieso een account aanmaken via https://hub.docker.com/. 
 
 ##### Images Mongo & Redis
@@ -128,6 +129,7 @@ Het doel van deze opdracht is het project omzetten in containers. Op deze manier
 Het doel van deze opdracht was zelf nieuwe containers maken voor de scraper en filter. Hiervoor moet je een account aanmaken via https://hub.docker.com/.
 Je kan zelf ook je eigen images maken met Dockerfiles of je kan mijn gemaakte images van mijn docker hub profiel halen.
 Ik heb ook mijn **red.py** en **redisToMongo.py** een beetje aangepast (zie map Docker versie red.py & redisToMongo.py).
+
 ### Ubuntu
 Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt geüpdatet!!! Dit doe je via de commando git pull met de link https://github.com/KatoBeke/Databases-advanced.git. <br> 
 
@@ -138,31 +140,14 @@ Je moet ook sowieso een account aanmaken via https://hub.docker.com/.
 
 ##### Creër je eigen images
 Maak een Dockerfile met de volgende code en geen extensie. Je kan natuurlijk ook mijn dockerfiles downloaden van mijn Github repository.
+
 ###### Scraper
 
 ###### Parser
 
-###### MongoDB & Redis
-Om de containers van mongo en redis te runnen op Ubuntu ga je naar de volgende sites:
-* https://hub.docker.com/_/mongo (commando docker pull mongo)
-* https://hub.docker.com/_/redis (commando docker pull redis)
 
 ##### Images pullen
 Ga naar ...
 
-##### Images veranderen naar containers
-docker run -d mongo
-docker run -d redis
-
-##### Alle lopende containers opsommen
-Om een overzicht te krijgen van de containers gebruik je het commando: docker ps.
-
-##### Runnende containers stoppen
-docker stop mongo
-docker stop redis
-
-##### Containers verwijderen
-docker rm mongo
-docker rm redis
 
 ### Network creëren en containers toevoegen
