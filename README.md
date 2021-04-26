@@ -139,15 +139,32 @@ Als je Linux hebt moet ik je in je Ubuntu terminal het volgende ingeven: sudo ap
 Je moet ook sowieso een account aanmaken via https://hub.docker.com/. 
 
 ##### Creër je eigen images
-Maak een Dockerfile met de volgende code en geen extensie. Je kan natuurlijk ook mijn dockerfiles downloaden van mijn Github repository.
-
-###### Scraper
-
-###### Parser
+Downloadt mijn dockerfiles van mijn Github repository (zie map Docker files)!
 
 
 ##### Images pullen
 Ga naar ...
 
+##### Alle images opsommen
+Om een overzicht te krijgen van de images gebruik je het commando: _docker images_.
+
+##### Images verwijderen
+_docker rm scraper_ <br>
+_docker rm parser 
+
+##### Images veranderen naar containers
+_docker run -d scraper_ <br>
+_docker run -d parser_
+
+##### Alle lopende containers opsommen
+Om een overzicht te krijgen van de containers gebruik je het commando: _docker ps_.
+
+##### Runnende containers stoppen
+_docker stop scraper_ <br>
+_docker stop parser__
+
+##### Containers verwijderen
+_docker rm scraper_ <br>
+_docker rm parser_
 
 ### Network creëren en containers toevoegen
