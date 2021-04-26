@@ -118,7 +118,7 @@ Om een overzicht te krijgen van de containers gebruik je het commando: _docker p
 
 ##### Runnende containers stoppen
 _docker stop mongo_ <br>
-_docker stop redis__
+_docker stop redis_
 
 ##### Containers verwijderen
 _docker rm mongo_ <br>
@@ -150,7 +150,7 @@ Om een overzicht te krijgen van de images gebruik je het commando: _docker image
 
 ##### Images verwijderen
 _docker rm scraper_ <br>
-_docker rm parser 
+_docker rm parser_ 
 
 ##### Images veranderen naar containers
 _docker run -d scraper_ <br>
@@ -161,7 +161,7 @@ Om een overzicht te krijgen van de containers gebruik je het commando: _docker p
 
 ##### Runnende containers stoppen
 _docker stop scraper_ <br>
-_docker stop parser__
+_docker stop parser_
 
 ##### Containers verwijderen
 _docker rm scraper_ <br>
