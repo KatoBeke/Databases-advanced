@@ -110,7 +110,7 @@ _docker rm mongo_ <br>
 _docker rm redis_ 
 
 ##### Images veranderen naar containers
-_docker run -d mmongo_ <br>
+_docker run -d mongo_ <br>
 _docker run -d redis_
 
 ##### Alle lopende containers opsommen
