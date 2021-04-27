@@ -1,6 +1,6 @@
 # Om de images van mongo en redis te runnen gebruik je de volgende commando's:
-pull mongo
-pull redis
+docker pull mongo
+docker pull redis
 
 # Om een overzicht te krijgen van de images gebruik je het commando:
 docker images
