@@ -145,23 +145,23 @@ Ga naar https://hub.docker.com/repository/docker/katobeke/databases-advanced-scr
 Om een overzicht te krijgen van de images gebruik je het commando: <code>docker images</code>.
 
 ##### Images verwijderen
-<code>docker rmi scraper</code> <br>
-<code>docker rmi parser</code>
+<code>docker rmi katobeke/databases-advanced-scraper</code> <br>
+<code>docker rmi katobeke/databases-advanced-parser</code>
 
 ##### Images veranderen naar containers
-<code>docker run -d scraper</code> <br>
-<code>docker run -d parser</code>
+<code>docker run -d katobeke/databases-advanced-scraper</code> <br>
+<code>docker run -d katobeke/databases-advanced-parserd</code>
 
 ##### Alle lopende containers opsommen
 Om een overzicht te krijgen van de containers gebruik je het commando: <code>docker ps</code>.
 
 ##### Runnende containers stoppen
-<code>docker stop scraper</code> <br>
-<code>docker stop parser</code>
+<code>docker stop databases-advanced-scraper</code> <br>
+<code>docker stop katobeke/databases-advanced-parser</code>
 
 ##### Containers verwijderen
-<code>docker rm scraper</code> <br>
-<code>docker rm parser</code>
+<code>docker rm databases-advanced-scraper</code> <br>
+<code>docker rm databases-advanced-scraper</code>
 
 ### Network creëren en containers toevoegen
 Voor meer info: https://docs.docker.com/network/bridge/
