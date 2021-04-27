@@ -153,7 +153,7 @@ Om een overzicht te krijgen van de images gebruik je het commando: <code>docker 
 
 ##### Images veranderen naar containers
 <code>docker run katobeke/databases-advanced-scraper</code> <br>
-<code>docker run katobeke/databases-advanced-parserd</code>
+<code>docker run katobeke/databases-advanced-parser</code>
 
 ##### Alle lopende containers opsommen
 Om een overzicht te krijgen van de containers gebruik je het commando: <code>docker ps</code>.
@@ -167,4 +167,6 @@ Om een overzicht te krijgen van de containers gebruik je het commando: <code>doc
 <code>docker rm databases-advanced-scraper</code>
 
 ### Network creëren en containers toevoegen
+Network creëren: <code>docker network create mynetwork</code>. <br>
+Containers toevoegen: <code>docker network connect mynetwork mongo</code>, <code>docker network connect mynetwork redis</code>, <code>docker network connect mynetwork katobeke/databases-advanced-scraper</code> en <code>docker network connect mynetwork katobeke/databases-advanced-parser</code><br>
 Voor meer info: https://docs.docker.com/network/bridge/
