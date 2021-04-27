@@ -139,8 +139,9 @@ Om je images naar Docker Hub te pushen gebruik je de commando's: <br>
 <code>docker push katobeke/databases-advanced-parser:latest</code>
 
 ##### Images pullen
-Ga naar https://hub.docker.com/repository/docker/katobeke/databases-advanced-scraper en https://hub.docker.com/repository/docker/katobeke/databases-advanced-parser. Gebruik de commando's:
-<code>docker pull katobeke/databases-advanced-scraper:latest</code>
+Ga naar https://hub.docker.com/repository/docker/katobeke/databases-advanced-scraper en https://hub.docker.com/repository/docker/katobeke/databases-advanced-parser. <br>
+Gebruik de commando's: <br>
+<code>docker pull katobeke/databases-advanced-scraper:latest</code> <br>
 <code>docker pull katobeke/databases-advanced-parser:latest</code>
 
 ##### Alle images opsommen
