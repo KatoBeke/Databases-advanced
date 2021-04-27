@@ -158,3 +158,4 @@ Om een overzicht te krijgen van de containers gebruik je het commando: <code>doc
 <code>docker rm parser</code>
 
 ### Network creëren en containers toevoegen
+Voor meer info: https://docs.docker.com/network/bridge/
