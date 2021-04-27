@@ -64,23 +64,23 @@ Zodra je het script **mongo.py** begint te runnen wordt elke minuut de meest waa
 Het doel van deze opdracht is om de data die ik heb gescrapet (scraper.py) onmiddellijk te bewaren in een Redis-database (**red.py**). Deze Redis-database houdt deze data slechts 1 minuut bij (**red.py**). Als de data zich in mijn Redis-databank bevindt, haalt mijn **redisToMongo.py** de data uit de Redis-databank en filtert de data zodat enkel de hash met de hoogste waarde in USD overblijft. Vervolgens wordt de hash met de hoogste waarde in USD definitief opgeslagen in een database van MongoDB. Als de data is opgeslagen in de MongoDB-database wordt de data uit de Redis-database verwijderd. Heel dit proces gebeurt om de 1 minuut.
 
 ### Ubuntu
-Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt geüpdatet!!! Dit doe je via de commando git pull met de link https://github.com/KatoBeke/Databases-advanced.git. <br> 
+Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt geüpdatet!!! Dit doe je via de commando <code>git pull https://github.com/KatoBeke/Databases-advanced.git.</code> <br> 
 
 #### Redis
-Om **Redis** te installeren moet je de volgende commando's gebruiken (of gebruik **redis.sh** van de map Bash scripts):
-* sudo apt-get install redis-server
-* sudo systemctl status redis-server
+Om **Redis** te installeren moet je de volgende commando's gebruiken (of gebruik **redis.sh** van de map Bash scripts): <br>
+<code>sudo apt-get install redis-server</code> <br>
+<code>sudo systemctl status redis-server</code>
 
-Om **Redis** te starten gebruik je het commando _sudo systemctl start redis_ (of gebruik **redis.sh** van de map Bash scripts).
+Om **Redis** te starten gebruik je het commando <code>sudo systemctl start redis</code> (of gebruik **redis.sh** van de map Bash scripts).
 
-Om **Redis** te stoppen gebruik je het commando _sudo systemctl stop redis_ (of gebruik **redis.sh** van de map Bash scripts).
+Om **Redis** te stoppen gebruik je het commando <code>sudo systemctl stop redis</code> (of gebruik **redis.sh** van de map Bash scripts).
 
 Voor deze opdracht heb ik 2 Python scripts namelijk **red.py** en **redisToMongo.py**. Gebruik het script **red.py** om de gescrapete data in te voeren in de Redis-databank. Gebruik het script **redisToMongo.py** om uit de Redis-databank de hash met de hoogste waarde in USD per minuut te halen en in te voeren in de MongoDB database. <br>
-Om **red.py** en **redisToMongo.py** te kunnen gebruiken en dus mongo te runnen, moet je de volgende commando's gebruiken:
-* pip3 install redis 
+Om **red.py** en **redisToMongo.py** te kunnen gebruiken en dus mongo te runnen, moet je de volgende commando's gebruiken: <br> 
+<code>pip3 install redis</code> 
 
-Het is ook heel belangrijk dat als je de script **red.py** en **redisToMongo.py** wil runnen je in dezelfde map zit als waar **red.py** en **redisToMongo.py** staan. Om naar dezelfde map te gaan typ je cd Databases-advanced. <br> <br>
-Om de scripts **red.py** en **redisToMongo.py** te kunnen runnen gebruik je de commando's python3 red.py en python3 redisToMongo.py. Om de uitvoering van de scripts te stoppen, typ je ctrl + c in de terminal.
+Het is ook heel belangrijk dat als je de script **red.py** en **redisToMongo.py** wil runnen je in dezelfde map zit als waar **red.py** en **redisToMongo.py** staan. Om naar dezelfde map te gaan typ je <code>cd Databases-advanced</code>. <br> <br>
+Om de scripts **red.py** en **redisToMongo.py** te kunnen runnen gebruik je de commando's <code>python3 red.py</code> en <code>python3 redisToMongo.py</code>. Om de uitvoering van de scripts te stoppen, typ je ctrl + c in de terminal.
 
 #### MongoDB Compass
 Als u een visuele interface wilt, kunt u MongoDB Compass installeren. Zie Opdracht 2!!!
@@ -90,28 +90,28 @@ Het doel van deze opdracht is het project omzetten in containers. Op deze manier
 Het doel van deze opdracht is de bestaande containers van mongo en redis runnen op Ubuntu. Hiervoor moet je een account aanmaken via https://hub.docker.com/.
 
 ### Ubuntu
-Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt geüpdatet!!! Dit doe je via de commando git pull met de link https://github.com/KatoBeke/Databases-advanced.git. <br> 
+Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt geüpdatet!!! Dit doe je via de commando <code>git pull https://github.com/KatoBeke/Databases-advanced.git.</code> <br> 
 
 #### Docker
-Gebruik het commando _sudo apt install docker.io_ in Ubuntu om Docker te installeren.
+Gebruik het commando <code>sudo apt install docker.io</code> in Ubuntu om Docker te installeren.
 Je moet ook sowieso een account aanmaken via https://hub.docker.com/. 
 
 ##### Images Mongo & Redis
 Om de images van mongo en redis te runnen op Ubuntu ga je naar de volgende sites:
-* https://hub.docker.com/_/mongo (commando _docker pull mongo_)
-* https://hub.docker.com/_/redis (commando _docker pull redis_)
+* https://hub.docker.com/_/mongo (commando <code>docker pull mongo</code>)
+* https://hub.docker.com/_/redis (commando <code>docker pull redis</code>)
 
 ##### Images Mongo & Redis converteren naar containers
-Om de images van mongo en redis te veranderen naar containers gebruik je de volgende commando's:
-* _docker run -d -p 27017:27017 mongo_
-* _docker run -d redis_
+Om de images van mongo en redis te veranderen naar containers gebruik je de volgende commando's: <br>
+<code>docker run -d -p 27017:27017 mongo</code> <br>
+<code>docker run -d redis</code>
 
 Voor alle commando's te zien die je nodig hebt, ga naar de map Docker, Docker images!
 
 ##### Runnen van red.py en redisToMongo.py
-Zorg dat je in de juiste map zit om te scraper te kunnen runnen: cd Databases advanced. <br>
+Zorg dat je in de juiste map zit om te scraper te kunnen runnen: <code>cd Databases advanced</code>. <br>
 Voor deze opdracht heb ik 2 Python scripts namelijk **red.py** en **redisToMongo.py**. Gebruik het script **red.py** om de gescrapete data in te voeren in de Redis-databank. Gebruik het script **redisToMongo.py** om uit de Redis-databank de hash met de hoogste waarde in USD per minuut te halen en in te voeren in de MongoDB database. <br>
-Om de scripts **red.py** en **redisToMongo.py** te kunnen runnen gebruik je de commando's python3 red.py en python3 redisToMongo.py. Om de uitvoering van de scripts te stoppen, typ je ctrl + c in de terminal.
+Om de scripts **red.py** en **redisToMongo.py** te kunnen runnen gebruik je de commando's <code>python3 red.py</code> en <code>python3 redisToMongo.py</code>. Om de uitvoering van de scripts te stoppen, typ je ctrl + c in de terminal.
 
 ## Opdracht 5: Container Orchestration (red.py, redisToMongo.py)
 Het doel van deze opdracht is het project omzetten in containers. Op deze manier kan je elk onderdeel in een docker container runnen. Hierdoor kan je dit project overal draaien waar je ook maar wilt. 
@@ -120,40 +120,40 @@ Je kan zelf ook je eigen images maken met Dockerfiles of je kan mijn gemaakte im
 Ik heb ook mijn **red.py** en **redisToMongo.py** een beetje aangepast (zie map Docker, Container Orchestration).
 
 ### Ubuntu
-Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt geüpdatet!!! Dit doe je via de commando git pull met de link https://github.com/KatoBeke/Databases-advanced.git. <br> 
+Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt geüpdatet!!! Dit doe je via de commando <code>git pull https://github.com/KatoBeke/Databases-advanced.git.</code> <br> 
 
 #### Docker
-Gebruik het commando _sudo apt install docker.io_ in Ubuntu om Docker te installeren.
+Gebruik het commando <code>sudo apt install docker.io</code> in Ubuntu om Docker te installeren.
 Je moet ook sowieso een account aanmaken via https://hub.docker.com/. 
 
 ##### Creër je eigen images
 Downloadt mijn dockerfiles van mijn Github repository (map Docker, Container Orchestration, Docker files)! <br>
 Voor meer info: https://docs.docker.com/compose/gettingstarted/ en https://linuxize.com/post/how-to-build-docker-images-with-dockerfile/ <br>
 
-Om Docker images te maken met de dockerfiles ga naar de map waar de dockerfiles staan (Databases-advanced/Docker/Container-orchestration/Docker-files/Scraper en Databases-advanced/Docker/Container-orchestration/Docker-files/Parser). Typ vervolgens in de terminal _docker build -t scraper ._ en _docker build -t parser ._
+Om Docker images te maken met de dockerfiles ga naar de map waar de dockerfiles staan (Databases-advanced/Docker/Container-orchestration/Docker-files/Scraper en Databases-advanced/Docker/Container-orchestration/Docker-files/Parser). Typ vervolgens in de terminal <code>docker build -t scraper .</code> en <code>docker build -t parser .</code>.
 ##### Images pullen
 Ga naar ...
 
 ##### Alle images opsommen
-Om een overzicht te krijgen van de images gebruik je het commando: _docker images_.
+Om een overzicht te krijgen van de images gebruik je het commando: <code>docker images</code>.
 
 ##### Images verwijderen
-_docker rmi scraper_ <br>
-_docker rmi parser_ 
+<code>docker rmi scraper</code> <br>
+<code>docker rmi parser</code>
 
 ##### Images veranderen naar containers
-_docker run -d scraper_ <br>
-_docker run -d parser_
+<code>docker run -d scraper</code> <br>
+<code>docker run -d parser</code>
 
 ##### Alle lopende containers opsommen
-Om een overzicht te krijgen van de containers gebruik je het commando: _docker ps_.
+Om een overzicht te krijgen van de containers gebruik je het commando: <code>docker ps</code>.
 
 ##### Runnende containers stoppen
-_docker stop scraper_ <br>
-_docker stop parser_
+<code>docker stop scraper</code> <br>
+<code>docker stop parser</code>
 
 ##### Containers verwijderen
-_docker rm scraper_ <br>
-_docker rm parser_
+<code>docker rm scraper</code> <br>
+<code>docker rm parser</code>
 
 ### Network creëren en containers toevoegen
