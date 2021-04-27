@@ -10,8 +10,8 @@ Ik heb mijn script op mijn Windows pc gemaakt. Download deze repository op Ubunt
 
 Om het script **scraper.py** te kunnen gebruiken moet je python runnen. Ik raad je de laatste versie van Python (3.9.2) aan. Om python te installeren gebruik je de commando sudo apt install python3. <br>
 Daarnaast moet je ook pip, pandas en bs4 installeren. Je kan dit doen door de volgende commando's te typen in je Python terminal:
-<code>sudo apt install python3-pip</code>
-<code>pip3 install pandas</code>
+<code>sudo apt install python3-pip</code> <br>
+<code>pip3 install pandas</code> <br>
 <code>pip3 install bs4</code>
 
 Het is ook heel belangrijk dat als je het script **scraper.py** wil runnen je in dezelfde map zit als waar **scraper.py** staat. Om naar dezelfde map te gaan typ je <code>cd Databases-advanced</code>. <br> <br>
