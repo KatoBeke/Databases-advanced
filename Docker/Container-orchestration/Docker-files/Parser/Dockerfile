@@ -1,9 +1,9 @@
 FROM ubuntu:latest AS parser
 COPY . .
 RUN apt-get update
-RUN apt-get install -y git
-RUN apt-get install -y python3-pip
-RUN apt-get install -y python3
+RUN apt-get install git
+RUN apt-get install python3-pip
+RUN apt-get install python3
 RUN git clone https://github.com/KatoBeke/Databases-advanced.git
 RUN cd Databases-advanced
 RUN pip3 install requests
