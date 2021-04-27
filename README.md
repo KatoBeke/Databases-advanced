@@ -9,13 +9,13 @@ Het doel van deze opdracht is om de scraper te runnen op Ubuntu Virtual Machine.
 Ik heb mijn script op mijn Windows pc gemaakt. Download deze repository op Ubuntu via de commando <code> git clone https://github.com/KatoBeke/Databases-advanced.git </code>. <br> 
 
 Om het script **scraper.py** te kunnen gebruiken moet je python runnen. Ik raad je de laatste versie van Python (3.9.2) aan. Om python te installeren gebruik je de commando sudo apt install python3. <br>
-Daarnaast moet je ook pip, pandas en bs4 installeren. Je kan dit doen door de volgende commando's te typen in je Python terminal:
+Daarnaast moet je ook pip, pandas en bs4 installeren. Je kan dit doen door de volgende commando's te typen in je Python terminal: <br>
 <code> sudo apt install python3-pip </code> <br>
 <code> pip3 install pandas </code> <br>
 <code> pip3 install bs4 </code>
 
-Het is ook heel belangrijk dat als je het script **scraper.py** wil runnen je in dezelfde map zit als waar **scraper.py** staat. Om naar dezelfde map te gaan typ je <code>cd Databases-advanced</code>. <br> <br>
-Om het script **scraper.py** te kunnen runnen gebruik je de commando <code>python3 scraper.py</code>. Om de uitvoering van het script te stoppen, typ je ctrl + c in de terminal.
+Het is ook heel belangrijk dat als je het script **scraper.py** wil runnen je in dezelfde map zit als waar **scraper.py** staat. Om naar dezelfde map te gaan typ je <code> cd Databases-advanced </code>. <br> <br>
+Om het script **scraper.py** te kunnen runnen gebruik je de commando <code> python3 scraper.py </code>. Om de uitvoering van het script te stoppen, typ je ctrl + c in de terminal.
 
 ## Opdracht 2: Mongo (mongo.py, bash.sh en mongo.sh)
 Het doel van deze opdracht is de data uit de vorige opdracht in MongoDB plaatsen. 
