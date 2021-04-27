@@ -103,7 +103,7 @@ Om de images van mongo en redis te runnen op Ubuntu ga je naar de volgende sites
 
 ##### Images Mongo & Redis converteren naar containers
 Om de images van mongo en redis te veranderen naar containers gebruik je de volgende commando's:
-* _docker run -d mongo_
+* _docker run -d -p 27017:27017 mongo_
 * _docker run -d redis_
 
 Voor alle commando's te zien die je nodig hebt, ga naar de map Docker, Docker images!
@@ -123,8 +123,9 @@ Je moet ook sowieso een account aanmaken via https://hub.docker.com/.
 
 ##### Creër je eigen images
 Downloadt mijn dockerfiles van mijn Github repository (map Docker, Container Orchestration, Docker files)! <br>
-Voor meer info: https://docs.docker.com/compose/gettingstarted/
+Voor meer info: https://docs.docker.com/compose/gettingstarted/ en https://linuxize.com/post/how-to-build-docker-images-with-dockerfile/ <br>
 
+Om Docker images te maken met de dockerfiles ga naar de map waar de dockerfiles staan (Databases-advanced/Docker/Container-orchestration/Docker-files/Scraper en Databases-advanced/Docker/Container-orchestration/Docker-files/Parser). Typ vervolgens in de terminal _docker build -t scraper ._ en _docker build -t parser ._.
 ##### Images pullen
 Ga naar ...
 
