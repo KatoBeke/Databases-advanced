@@ -108,6 +108,11 @@ Om de images van mongo en redis te veranderen naar containers gebruik je de volg
 
 Voor alle commando's te zien die je nodig hebt, ga naar de map Docker, Docker images!
 
+##### Runnen van red.py en redisToMongo.py
+Zorg dat je in de juiste map zit om te scraper te kunnen runnen: cd Databases advanced. <br>
+Voor deze opdracht heb ik 2 Python scripts namelijk **red.py** en **redisToMongo.py**. Gebruik het script **red.py** om de gescrapete data in te voeren in de Redis-databank. Gebruik het script **redisToMongo.py** om uit de Redis-databank de hash met de hoogste waarde in USD per minuut te halen en in te voeren in de MongoDB database. <br>
+Om de scripts **red.py** en **redisToMongo.py** te kunnen runnen gebruik je de commando's python3 red.py en python3 redisToMongo.py. Om de uitvoering van de scripts te stoppen, typ je ctrl + c in de terminal.
+
 ## Opdracht 5: Container Orchestration (red.py, redisToMongo.py)
 Het doel van deze opdracht is het project omzetten in containers. Op deze manier kan je elk onderdeel in een docker container runnen. Hierdoor kan je dit project overal draaien waar je ook maar wilt. 
 Het doel van deze opdracht was zelf nieuwe containers maken voor de scraper en filter. Hiervoor moet je een account aanmaken via https://hub.docker.com/.
