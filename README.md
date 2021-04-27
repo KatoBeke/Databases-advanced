@@ -6,50 +6,50 @@ Ik heb hiervan de hash, time, btc en usd gescrapet. Daarna heb ik de hash, time,
 
 ### Ubuntu
 Het doel van deze opdracht is om de scraper te runnen op Ubuntu Virtual Machine. 
-Ik heb mijn script op mijn Windows pc gemaakt. Download deze repository op Ubuntu via de commando <code> git clone https://github.com/KatoBeke/Databases-advanced.git </code>. <br> 
+Ik heb mijn script op mijn Windows pc gemaakt. Download deze repository op Ubuntu via de commando <code>git clone https://github.com/KatoBeke/Databases-advanced.git</code>. <br> 
 
-Om het script **scraper.py** te kunnen gebruiken moet je python runnen. Ik raad je de laatste versie van Python (3.9.2) aan. Om python te installeren gebruik je de commando sudo apt install python3. <br>
+Om het script **scraper.py** te kunnen gebruiken moet je python runnen. Ik raad je de laatste versie van Python (3.9.2) aan. Om python te installeren gebruik je de commando <code>sudo apt install python3</code>. <br>
 Daarnaast moet je ook pip, pandas en bs4 installeren. Je kan dit doen door de volgende commando's te typen in je Python terminal: <br>
 <code>sudo apt install python3-pip</code> <br>
 <code>pip3 install pandas</code> <br>
 <code>pip3 install bs4</code>
 
-Het is ook heel belangrijk dat als je het script **scraper.py** wil runnen je in dezelfde map zit als waar **scraper.py** staat. Om naar dezelfde map te gaan typ je <code> cd Databases-advanced </code>. <br> <br>
-Om het script **scraper.py** te kunnen runnen gebruik je de commando <code> python3 scraper.py </code>. Om de uitvoering van het script te stoppen, typ je ctrl + c in de terminal.
+Het is ook heel belangrijk dat als je het script **scraper.py** wil runnen je in dezelfde map zit als waar **scraper.py** staat. Om naar dezelfde map te gaan typ je <code>cd Databases-advanced</code>. <br> <br>
+Om het script **scraper.py** te kunnen runnen gebruik je de commando <code>python3 scraper.py</code>. Om de uitvoering van het script te stoppen, typ je ctrl + c in de terminal.
 
 ## Opdracht 2: Mongo (mongo.py, bash.sh en mongo.sh)
 Het doel van deze opdracht is de data uit de vorige opdracht in MongoDB plaatsen. 
 
 ### Ubuntu
-Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt geüpdatet!!! Dit doe je via de commando git pull met de link https://github.com/KatoBeke/Databases-advanced.git. <br> 
+Ik gebruik nog altijd Ubuntu. Zorg er zeker voor dat je jouw git op Ubuntu hebt geüpdatet!!! Dit doe je via de commando <code>git pull https://github.com/KatoBeke/Databases-advanced.git</code>. <br> 
 #### MongoDB
-Om **MongoDB** te installeren moet je de volgende commando's gebruiken (of gebruik **bash.sh** van de map Bash scripts):
-* sudo apt install curl
-* curl -fsSL https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
-* echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
-* sudo apt update
-* sudo apt install mongodb-org
+Om **MongoDB** te installeren moet je de volgende commando's gebruiken (of gebruik **bash.sh** van de map Bash scripts): <br>
+<code>sudo apt install curl</code> <br>
+<code>curl -fsSL https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -</code> <br>
+<code>echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list</code> <br>
+<code>sudo apt update</code> <br>
+<code>sudo apt install mongodb-org</code>
 
-Om **MongoDB** te starten gebruik je de commando's (of gebruik **mongo.sh** van de map Bash scripts):
-* sudo systemctl start mongod
-* sudo systemctl status mongod
-* sudo systemctl enable mongod
-* mongo --eval 'db.runCommand({ connectionStatus: 1 })'
+Om **MongoDB** te starten gebruik je de commando's (of gebruik **mongo.sh** van de map Bash scripts): <br>
+<code>sudo systemctl start mongod</code> <br>
+<code>sudo systemctl status mongod</code> <br>
+<code>sudo systemctl enable mongod</code> <br>
+<code>mongo --eval 'db.runCommand({ connectionStatus: 1 })'</code>
 
 Ik heb mijn scraper aangepast en dit een nieuwe naam gegeven namelijk **mongo.py**. <br>
-Om **mongo.py** te kunnen gebruiken en dus mongo te runnen, moet je de volgende commando's gebruiken:
-* pip3 install pymongo 
-* cd < mongodb installation dir >/ bin
-* mongo
+Om **mongo.py** te kunnen gebruiken en dus mongo te runnen, moet je de volgende commando's gebruiken: <br>
+<code>pip3 install pymongo</code> <br>
+<code>cd < mongodb installation dir >/ bin</code> <br>
+<code>mongo</code>
 
-Het is ook heel belangrijk dat als je het script **mongo.py** wil runnen je in dezelfde map zit als waar **mongo.py** staat. Om naar dezelfde map te gaan typ je cd Databases-advanced. <br> <br>
-Om het script **mongo.py** te kunnen runnen gebruik je de commando python3 mongo.py. Om de uitvoering van het script te stoppen, typ je ctrl + c in de terminal.
+Het is ook heel belangrijk dat als je het script **mongo.py** wil runnen je in dezelfde map zit als waar **mongo.py** staat. Om naar dezelfde map te gaan typ je <code>cd Databases-advanced</code>. <br> <br>
+Om het script **mongo.py** te kunnen runnen gebruik je de commando <code>python3 mongo.py</code>. Om de uitvoering van het script te stoppen, typ je ctrl + c in de terminal.
 
 #### MongoDB Compass
-Als u een visuele interface wilt, kunt u MongoDB Compass installeren. Hiervoor gebruik je de volgende commando's: 
-* apt-get update
-* wget https://dowloads.mongodb.com/compass/mongodb-compass_1.26.1_amd64.deb
-* sudo dpkg -i mongodb-compass_1.26.1_amd64.deb
+Als u een visuele interface wilt, kunt u MongoDB Compass installeren. Hiervoor gebruik je de volgende commando's: <br>
+<code>apt-get update</code> <br>
+<code>wget https://dowloads.mongodb.com/compass/mongodb-compass_1.26.1_amd64.deb</code> <br>
+<code>sudo dpkg -i mongodb-compass_1.26.1_amd64.deb</code>
 
 Ga nu naar applications op Ubuntu en selecteer MongoDB Compass. MongoDB Compass wordt geopend. 
 Om te connecteren klik je op Connect en Connect to... Je kan op 2 manieren connecteren:
