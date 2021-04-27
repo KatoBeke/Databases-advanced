@@ -132,8 +132,8 @@ Ga naar ...
 Om een overzicht te krijgen van de images gebruik je het commando: _docker images_.
 
 ##### Images verwijderen
-_docker rm scraper_ <br>
-_docker rm parser_ 
+_docker rmi scraper_ <br>
+_docker rmi parser_ 
 
 ##### Images veranderen naar containers
 _docker run -d scraper_ <br>
