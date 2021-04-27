@@ -132,8 +132,14 @@ Voor meer info: https://docs.docker.com/compose/gettingstarted/ en https://linux
 
 Om Docker images te maken met de dockerfiles ga naar de map waar de dockerfiles staan (Databases-advanced/Docker/Container-orchestration/Docker-files/Scraper en Databases-advanced/Docker/Container-orchestration/Docker-files/Parser). Typ vervolgens in de terminal <code>docker build -t scraper .</code> en <code>docker build -t parser .</code>.
 
+Om je images naar Docker Hub te pushen gebruik je de commando's: <br>
+<code>docker tag scraper katobeke/databases-advanced-scraper:latest</code> <br>
+<code>docker push katobeke/databases-advanced-scraper:latest</code>  <br>
+<code>docker tag parser katobeke/databases-advanced-parser:latest</code> <br>
+<code>docker push katobeke/databases-advanced-parser:latest</code>
+
 ##### Images pullen
-Ga naar ...
+Ga naar https://hub.docker.com/repository/docker/katobeke/databases-advanced-scraper en https://hub.docker.com/repository/docker/katobeke/databases-advanced-parser.
 
 ##### Alle images opsommen
 Om een overzicht te krijgen van de images gebruik je het commando: <code>docker images</code>.
