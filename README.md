@@ -167,6 +167,12 @@ Om een overzicht te krijgen van de containers gebruik je het commando: <code>doc
 <code>docker rm databases-advanced-scraper</code>
 
 ### Network creëren en containers toevoegen
-Network creëren: <code>docker network create mynetwork</code>. <br>
-Containers toevoegen: <code>docker network connect mynetwork mongo</code>, <code>docker network connect mynetwork redis</code>, <code>docker network connect mynetwork katobeke/databases-advanced-scraper</code> en <code>docker network connect mynetwork katobeke/databases-advanced-parser</code><br>
+#### Network creëren
+Gebruik het commando: <code>docker network create mynetwork</code>. <br>
+#### Containers toevoegen
+Gebruik de commando's:
+<code>docker network connect mynetwork mongo</code> <br>
+<code>docker network connect mynetwork redis</code> <br>
+<code>docker network connect mynetwork katobeke/databases-advanced-scraper</code> <br>
+<code>docker network connect mynetwork katobeke/databases-advanced-parser</code> <br>
 Voor meer info: https://docs.docker.com/network/bridge/
