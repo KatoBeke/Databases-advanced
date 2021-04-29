@@ -12,4 +12,5 @@ RUN pip3 install pandas
 RUN pip3 install pymongo 
 RUN pip3 install redis
 RUN cp "Databases-advanced/Docker/Container-orchestration/redisToMongo.py" .
+RUN python3 redisToMongo.py
 CMD ["python3","redisToMongo.py"]
