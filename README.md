@@ -7,6 +7,7 @@ Ik heb hiervan de hash, time, btc en usd gescrapet. Daarna heb ik de hash, time,
 ### Ubuntu
 Het doel van deze opdracht is om de scraper te runnen op Ubuntu Virtual Machine. 
 Ik heb mijn script op mijn Windows pc gemaakt. Download deze repository op Ubuntu via de commando <code>git clone https://github.com/KatoBeke/Databases-advanced.git</code>. <br> 
+Om dit te kunnen gebruiken moet je eerst git installeren. Hiervoor gebruik je het commando: <code>sudo apt install git</code> 
 
 Om het script **scraper.py** te kunnen gebruiken moet je python runnen. Ik raad je de laatste versie van Python (3.9.2) aan. Om python te installeren gebruik je de commando <code>sudo apt install python3</code>. <br>
 Daarnaast moet je ook pip, pandas en bs4 installeren. Je kan dit doen door de volgende commando's te typen in je Python terminal: <br>
