@@ -130,7 +130,7 @@ Je moet ook sowieso een account aanmaken via https://hub.docker.com/.
 Downloadt mijn dockerfiles van mijn Github repository (map Docker, Container Orchestration, Docker files)! <br>
 Voor meer info: https://docs.docker.com/compose/gettingstarted/ en https://linuxize.com/post/how-to-build-docker-images-with-dockerfile/ <br>
 
-Om Docker images te maken met de dockerfiles ga naar de map waar de dockerfiles staan (Databases-advanced/Docker/Container-orchestration/Docker-files/Scraper en Databases-advanced/Docker/Container-orchestration/Docker-files/Parser). Typ vervolgens in de terminal <code>docker build -t scraper .</code> en <code>docker build -t parser .</code>.
+Om Docker images te maken met de dockerfiles ga naar de map waar de dockerfiles staan (<code>cd Databases-advanced/Docker/Container-orchestration/Docker-files/Scraper</code> en <code>cd Databases-advanced/Docker/Container-orchestration/Docker-files/Parser</code>). Typ vervolgens in de terminal <code>docker build -t scraper .</code> en <code>docker build -t parser .</code>.
 
 Om je images naar Docker Hub te pushen gebruik je de commando's: <br>
 <code>docker tag scraper katobeke/databases-advanced-scraper:latest</code> <br>
