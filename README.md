@@ -152,8 +152,8 @@ Om een overzicht te krijgen van de images gebruik je het commando: <code>docker 
 <code>docker rmi katobeke/databases-advanced-parser</code>
 
 ##### Images veranderen naar containers
-<code>docker run katobeke/databases-advanced-scraper</code> <br>
-<code>docker run katobeke/databases-advanced-parser</code>
+<code>docker run -d katobeke/databases-advanced-scraper</code> <br>
+<code>docker run -d katobeke/databases-advanced-parser</code>
 
 ##### Alle lopende containers opsommen
 Om een overzicht te krijgen van de containers gebruik je het commando: <code>docker ps</code>.
