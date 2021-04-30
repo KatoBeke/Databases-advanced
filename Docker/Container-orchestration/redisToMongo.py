@@ -9,7 +9,7 @@ import redis
 connectie = redis.Redis(host='redis', port=6379, db=0)
 
 #Connecteren met MongoDB
-client = mongo.MongoClient("mongodb://mongo:27017") #Connecteren met Mongo
+client = mongo.MongoClient("mongodb://mongo2:27017") #Connecteren met Mongo
 database = client["highest_hashes"] #Een naam kiezen voor de database
 hoogste_hashes = database["values"] #Een naam kiezen voor de data uit de database (collection)
 
