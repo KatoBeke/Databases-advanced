@@ -1,7 +1,6 @@
 #Alle noodzakelijke modules en bibliotheken importeren
-#from urllib.request import urlopen, Request
+from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
-from requests import get
 import pandas as pd
 import time
 import redis
