@@ -12,5 +12,4 @@ RUN pip3 install pandas
 RUN pip3 install pymongo 
 RUN pip3 install redis
 RUN cp "Databases-advanced/Docker/Container-orchestration/red.py" .
-RUN python3 red.py
 CMD ["python3","red.py"]
