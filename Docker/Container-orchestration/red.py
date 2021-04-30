@@ -1,6 +1,7 @@
 #Alle noodzakelijke modules en bibliotheken importeren
-from urllib.request import urlopen, Request
+#from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
+from requests import get
 import pandas as pd
 import time
 import redis
@@ -54,7 +55,7 @@ def getTransactions():
         connectie.setex('data', 70, data.to_json())
 
 #Elke minuut alles herhalen
-while True: 
+while True:
     try:
         getTransactions()
     except:
