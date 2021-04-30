@@ -43,6 +43,7 @@ def toMongo(connectie, hoogste_hashes):
 #Elke minuut alles herhalen
 while True: 
     try:
+        print("Save to MongoDB")
         toMongo(connectie, hoogste_hashes)
     except:
         pass
