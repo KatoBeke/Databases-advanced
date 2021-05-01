@@ -99,13 +99,13 @@ Je moet ook sowieso een account aanmaken via https://hub.docker.com/.
 
 ##### Images Mongo & Redis
 Om de images van mongo en redis te runnen op Ubuntu ga je naar de volgende sites:
-* https://hub.docker.com/_/mongo (commando <code>docker pull mongo</code>)
-* https://hub.docker.com/_/redis (commando <code>docker pull redis</code>)
+* https://hub.docker.com/_/mongo (commando <code>docker pull mongo:latest</code>)
+* https://hub.docker.com/_/redis (commando <code>docker pull redis:latest</code>)
 
 ##### Images Mongo & Redis converteren naar containers
 Om de images van mongo en redis te veranderen naar containers gebruik je de volgende commando's: <br>
-<code>docker run -d -p 27017:27017 mongo</code> <br>
-<code>docker run -d redis</code>
+<code>docker run -p 27017:27017 –name mongo2 mongo</code> <br>
+<code>docker run –name redis redis</code>
 
 Voor alle commando's te zien die je nodig hebt, ga naar de map Docker, Docker images!
 
