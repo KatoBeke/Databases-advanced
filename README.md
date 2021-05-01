@@ -171,5 +171,5 @@ Gebruik de commando's:
 Voor meer info: https://docs.docker.com/network/bridge/
 
 ## Resultaat (result.sh)
-Run het script result.sh met het commando: <code>sh resultaat.sh</code> <br>.
+Run het script result.sh met het commando: <code>sh resultaat.sh</code>. <br>
 Om dit te kunnen uitvoeren moet je in de juiste map staan. Typ het commando: <code>cd Databases-advanced</code> en <code>cd Resultaat</code>. <br>
