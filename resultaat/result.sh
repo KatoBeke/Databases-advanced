@@ -1,0 +1,18 @@
+sudo chmod 666 /var/run/docker.sock
+docker pull katobeke/databases-advanced-scraper:latest
+docker pull redis:latest
+docker pull katobeke/databases-advanced-parser:latest
+docker pull mongo:latest
+sudo systemctl stop mongod
+sudo systemctl stop redis
+docker run –name redis redis
+docker run –name scraper katobeke/databases-advanced-scraper:latest
+docker run -p 27017:27017 –name mongo2 mongo
+docker run –name parser katobeke/databases-advanced-parser:latest
+docker network create mynetwork
+docker network connect mynetwork redis
+docker network connect mynetwork scraper
+docker network connect mynetwork mongo2
+docker network connect mynetwork parser
+sudo systemctl start redis
+sudo systemctl start mongod
