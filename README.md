@@ -148,10 +148,6 @@ Gebruik de commando's: <br>
 ##### Alle images opsommen
 Om een overzicht te krijgen van de images gebruik je het commando: <code>docker images</code>.
 
-##### Images verwijderen
-<code>docker rmi katobeke/databases-advanced-scraper</code> <br>
-<code>docker rmi katobeke/databases-advanced-parser</code>
-
 ##### Images veranderen naar containers
 <code>docker run –name scraper katobeke/databases-advanced-scraper:latest</code> <br>
 <code>docker run –name parser katobeke/databases-advanced-parser:latest</code>
@@ -163,23 +159,13 @@ Om een overzicht te krijgen van de containers gebruik je het commando: <code>doc
 <code>docker stop scraper</code> <br>
 <code>docker stop parser</code>
 
-##### Containers verwijderen
-<code>docker rm scraper</code> <br>
-<code>docker rm parser</code>
-
-##### Docker compose (docker-compose.yml)
-Definieer de diensten die je app vormen in docker-compose.yml zodat ze samen kunnen draaien in een geïsoleerde omgeving. 
-Voer het commando <code>docker-compose up</code> uit en het Docker compose commando start en draait je hele app. <br>
-Om dit te kunnen uitvoeren moet je in de juiste map staan. Typ het commando: <code>cd Databases-advanced</code>, <code>cd Docker</code>, <code>cd Container-orchestration</code> en <code>cd Docker-files</code>.  <br>
-Om het te stoppen typ: <code>docker-compose stop</code>.
-
 ### Network creëren en containers toevoegen
 #### Network creëren
 Gebruik het commando: <code>docker network create mynetwork</code>. <br>
 #### Containers toevoegen
 Gebruik de commando's:
-<code>docker network connect mynetwork scraper</code> <br>
 <code>docker network connect mynetwork redis</code> <br>
-<code>docker network connect mynetwork parser</code> <br>
+<code>docker network connect mynetwork scraper</code> <br>
 <code>docker network connect mynetwork mongo2</code> <br>
+<code>docker network connect mynetwork parser</code> <br>
 Voor meer info: https://docs.docker.com/network/bridge/
