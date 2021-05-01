@@ -32,7 +32,7 @@ def toMongo(connectie, hoogste_hashes):
         hoogste = df.sort_values(by=['USD'], ascending=False)
         #De eerste rij is de hash met de hoogste waarde in USD
         hoogste = hoogste.head(1)
-        #print(hoogste)
+        print(hoogste)
 
         #Hash met de hoogste waarde in USD converteren naar json
         json_data = hoogste.to_json(orient="records").replace('[','').replace(']','')
@@ -42,9 +42,5 @@ def toMongo(connectie, hoogste_hashes):
 
 #Elke minuut alles herhalen
 while True: 
-    try:
-        print("Save to MongoDB")
-        toMongo(connectie, hoogste_hashes)
-    except:
-        pass
     time.sleep(60)
+    toMongo(connectie, hoogste_hashes)
