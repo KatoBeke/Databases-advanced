@@ -55,8 +55,5 @@ def getTransactions():
 
 #Elke minuut alles herhalen
 while True:
-    try:
-        getTransactions()
-    except:
-        pass
     time.sleep(60)
+    getTransactions()
