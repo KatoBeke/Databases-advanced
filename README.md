@@ -105,7 +105,7 @@ Om de images van mongo en redis te runnen op Ubuntu ga je naar de volgende sites
 ##### Images Mongo & Redis converteren naar containers
 Om de images van mongo en redis te veranderen naar containers gebruik je de volgende commando's: <br>
 <code>docker run -p 27017:27017 –name mongo2 mongo</code> <br>
-<code>docker run –name redis redis</code>
+<code>docker run --name redis redis</code>
 
 Voor alle commando's te zien die je nodig hebt, ga naar de map Docker, Docker images!
 
@@ -153,19 +153,19 @@ Om een overzicht te krijgen van de images gebruik je het commando: <code>docker 
 <code>docker rmi katobeke/databases-advanced-parser</code>
 
 ##### Images veranderen naar containers
-<code>docker run -d katobeke/databases-advanced-scraper</code> <br>
-<code>docker run -d katobeke/databases-advanced-parser</code>
+<code>docker run –name scraper katobeke/databases-advanced-scraper:latest</code> <br>
+<code>docker run –name parser katobeke/databases-advanced-parser:latest</code>
 
 ##### Alle lopende containers opsommen
 Om een overzicht te krijgen van de containers gebruik je het commando: <code>docker ps</code>.
 
 ##### Runnende containers stoppen
-<code>docker stop databases-advanced-scraper</code> <br>
-<code>docker stop katobeke/databases-advanced-parser</code>
+<code>docker stop scraper</code> <br>
+<code>docker stop parser</code>
 
 ##### Containers verwijderen
-<code>docker rm databases-advanced-scraper</code> <br>
-<code>docker rm databases-advanced-scraper</code>
+<code>docker rm scraper</code> <br>
+<code>docker rm parser</code>
 
 ##### Docker compose (docker-compose.yml)
 Definieer de diensten die je app vormen in docker-compose.yml zodat ze samen kunnen draaien in een geïsoleerde omgeving. 
@@ -178,8 +178,8 @@ Om het te stoppen typ: <code>docker-compose stop</code>.
 Gebruik het commando: <code>docker network create mynetwork</code>. <br>
 #### Containers toevoegen
 Gebruik de commando's:
-<code>docker network connect mynetwork mongo</code> <br>
+<code>docker network connect mynetwork scraper</code> <br>
 <code>docker network connect mynetwork redis</code> <br>
-<code>docker network connect mynetwork katobeke/databases-advanced-scraper</code> <br>
-<code>docker network connect mynetwork katobeke/databases-advanced-parser</code> <br>
+<code>docker network connect mynetwork parser</code> <br>
+<code>docker network connect mynetwork mongo2</code> <br>
 Voor meer info: https://docs.docker.com/network/bridge/
