@@ -1,6 +1,6 @@
 # Om de images van mongo en redis te runnen gebruik je de volgende commando's:
-docker pull mongo
-docker pull redis
+docker pull mongo:latest
+docker pull redis:latest
 
 # Om een overzicht te krijgen van de images gebruik je het commando:
 docker images
@@ -10,16 +10,16 @@ docker rmi mongo
 docker rmi redis
 
 # Om de images van mongo en redis te veranderen naar containers gebruik je de volgende commando's:
-docker run -d -p 27017:27017 mongo
-docker run -d redis
+docker run -p 27017:27017 –name mongo2 mongo
+docker run --name redis redis
 
 # Om een overzicht te krijgen van de runnende containers gebruik je het commando:
 docker ps -a
 
 # Om de runnende containers te stoppen gebruik je de commando's:
-docker stop mongo
+docker stop mongo2
 docker stop redis
 
 # Om de containers van mongo en redis te verwijderen gebruik je de volgende commando's:
-docker rm mongo
+docker rm mongo2
 docker rm redis
