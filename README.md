@@ -163,7 +163,7 @@ Om een overzicht te krijgen van de containers gebruik je het commando: <code>doc
 #### Network creëren
 Gebruik het commando: <code>docker network create mynetwork</code>. <br>
 #### Containers toevoegen
-Gebruik de commando's:
+Gebruik de commando's: <br>
 <code>docker network connect mynetwork redis</code> <br>
 <code>docker network connect mynetwork scraper</code> <br>
 <code>docker network connect mynetwork mongo2</code> <br>
