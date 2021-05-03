@@ -160,6 +160,7 @@ Om een overzicht te krijgen van de containers gebruik je het commando: <code>doc
 <code>docker stop parser</code>
 
 ### Network creëren en containers toevoegen
+Voor meer info: https://docs.docker.com/network/bridge/
 #### Network creëren
 Gebruik het commando: <code>docker network create mynetwork</code>. <br>
 #### Containers toevoegen
@@ -168,7 +169,6 @@ Gebruik de commando's: <br>
 <code>docker network connect mynetwork scraper</code> <br>
 <code>docker network connect mynetwork mongo2</code> <br>
 <code>docker network connect mynetwork parser</code> <br>
-Voor meer info: https://docs.docker.com/network/bridge/
 
 ## Resultaat (resultaat.sh)
 Run het script result.sh met het commando: <code>sh resultaat.sh</code>. <br>
