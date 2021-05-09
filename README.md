@@ -171,5 +171,6 @@ Gebruik de commando's: <br>
 <code>docker network connect mynetwork parser</code> <br>
 
 ## Resultaat (resultaat.sh)
-Run het script result.sh met het commando: <code>sh resultaat.sh</code>. <br>
 Om dit te kunnen uitvoeren moet je in de juiste map staan. Typ het commando: <code>cd Databases-advanced</code> en <code>cd resultaat</code>. <br>
+Run het script **result.sh** met het commando: <code>sh resultaat.sh</code>. <br>
+Om de containers te stoppen run het script **stopContainers.sh** met het commando: <code>sh stopContainers.sh</code>. <br>
