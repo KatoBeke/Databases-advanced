@@ -128,7 +128,7 @@ Gebruik het commando <code>sudo apt install docker.io</code> in Ubuntu om Docker
 Je moet ook sowieso een account aanmaken via https://hub.docker.com/. 
 
 ##### Creër je eigen images
-Downloadt mijn dockerfiles van mijn Github repository (map Docker, Container Orchestration, Docker files)! <br>
+Download mijn dockerfiles van mijn Github repository (map Docker, Container Orchestration, Docker files)! <br>
 Voor meer info: https://docs.docker.com/compose/gettingstarted/ en https://linuxize.com/post/how-to-build-docker-images-with-dockerfile/ <br>
 
 Om Docker images te maken met de dockerfiles ga naar de map waar de dockerfiles staan (<code>cd Databases-advanced/Docker/Container-orchestration/Docker-files/Scraper</code> en <code>cd Databases-advanced/Docker/Container-orchestration/Docker-files/Parser</code>). Typ vervolgens in de terminal <code>docker build -t scraper .</code> en <code>docker build -t parser .</code>.
