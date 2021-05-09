@@ -172,5 +172,5 @@ Gebruik de commando's: <br>
 
 ## Resultaat (resultaat.sh)
 Om dit te kunnen uitvoeren moet je in de juiste map staan. Typ het commando: <code>cd Databases-advanced</code> en <code>cd resultaat</code>. <br>
-Run het script **result.sh** met het commando: <code>sh resultaat.sh</code>. <br>
+Om de images van Docker hub te halen, de containers te runnen, het netwerk te creëren en alle containers te verbinden met het netwerk run het script **result.sh** met het commando: <code>sh resultaat.sh</code>. <br>
 Om de containers te stoppen run het script **stopContainers.sh** met het commando: <code>sh stopContainers.sh</code>. <br>
